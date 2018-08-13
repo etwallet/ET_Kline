@@ -1,0 +1,248 @@
+@import "./config/Vars";
+.wallet_balance {
+  width: $content_width;
+  margin: 20px auto 0 auto;
+  padding-bottom: 135px;
+  padding-top: 45px;
+  .wallet_title {
+    font-size: 18px;
+    color: #c7cce6;
+    line-height: 2.8;
+    background: $dBg;
+    padding: 0px 30px;
+    margin-bottom: 20px;
+   
+  }
+  .left {
+    width: 220px;
+    float: left;
+  }
+  .right {
+    width: 960px;
+    min-height: 292px;
+    float: right;
+    border-radius: 3px;
+
+    .right-bottom {
+      background-color: $dBg;
+    }
+    .cny_zone {
+      display: flex;
+      background-color: $dBg;
+      border-radius: 4px;
+      color: $white;
+      padding: 12px 30px;
+      .cny_name {
+        color: #c7cce6;
+
+        font-size: 16px;
+        width: 280px;
+        line-height: 1.8;
+      }
+      .cny_use {
+        font-size: 16px;
+        width: 35%;
+        text-align: center;
+        line-height: 1.8;
+      }
+      .cny_frozen {
+        font-size: 16px;
+        width: 35%;
+        text-align: center;
+        line-height: 1.8;
+        span {
+          color: $table_th;
+        }
+      }
+      .cny_manage {
+        flex: 1;
+        text-align: right;
+        line-height: 2.2;
+        a {
+          color: $blue;
+          text-decoration: none;
+          margin-left: 12px;
+        }
+      }
+    }
+
+    .get_sbtc {
+      position: absolute;
+      right: 0;
+      bottom: 6px;
+      width: 140px;
+      height: 30px;
+      user-select: none;
+      cursor: pointer;
+      background-color: $yellow;
+      color: $white;
+      line-height: 30px;
+      font-size: 14px;
+      border-radius: 6px;
+      text-align: center;
+
+      &:hover {
+        background-color: $lYellow;
+      }
+    }
+
+    .table {
+      width: 900px;
+      margin: 10px auto 0 auto;
+      p {
+        color: #c7cce6;
+
+        font-size: 14px;
+        padding-top: 10px;
+        a {
+          display: inline;
+          padding: 0px;
+          color: #4598e0;
+          // line-height: 1.8;
+        }
+      }
+      .p1 {
+        padding-top: 5px;
+      }
+      h4 {
+        color: #c7cce6;
+
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: 400;
+      }
+      div {
+        color: #c7cce6;
+
+        font-size: 14px;
+        padding-top: 10px;
+        line-height: 1.5;
+        text-align: justify;
+        text-justify: inter-ideograph;
+      }
+      table {
+        border-collapse: collapse;
+        border: none;
+        thead {
+          height: 40px;
+          background-color: transparent;
+          th {
+            height: 40px;
+            padding: 0;
+            color: #61718a;
+            font-size: 12px;
+            font-weight: normal;
+          }
+          th:nth-child(1) {
+            width: 100px;
+            text-align: left;
+          }
+          th:nth-child(2) {
+            width: 180px;
+            text-align: right;
+          }
+          th:nth-child(3) {
+            width: 180px;
+            text-align: right;
+          }
+          th:nth-child(4) {
+            width: 420px;
+            text-align: right;
+          }
+        }
+
+        tbody {
+          tr {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            td {
+              text-align: center;
+              font-size: 14px;
+              height: 44px;
+              color: #c7cce6;
+              a {
+                text-decoration: none;
+                color: $blue;
+              }
+              &.manage {
+                color: $blue;
+                a {
+                  cursor: pointer;
+                  margin-left: 5px;
+                }
+              }
+            }
+            td:nth-child(1) {
+              width: 100px;
+              text-align: left;
+            }
+            td:nth-child(2) {
+              width: 180px;
+              text-align: right;
+            }
+            td:nth-child(3) {
+              width: 180px;
+              text-align: right;
+            }
+            td:nth-child(4) {
+              width: 420px;
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
+  }
+  .clear {
+    clear: both;
+  }
+}
+
+/deep/ .el-dialog__wrapper {
+  .el-dialog {
+    width: 400px;
+  }
+  .el-dialog__body {
+    padding: 30px 20px 0px 20px;
+  }
+  .el-dialog__footer {
+    padding: 20px 20px 15px;
+  }
+
+  .sbtc_dialog_notice {
+    color: $red;
+  }
+
+  .input_group {
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+    .sbtc_qty_label {
+      display: inline-block;
+      width: 20%;
+      min-width: 60px;
+      line-height: 20px;
+    }
+    .sbtc_qty_input {
+      display: inline-block;
+      width: 70%;
+      height: 38px;
+      padding-left: 6px;
+    }
+
+    .sbtc_flag {
+      position: absolute;
+      right: 30px;
+      top: 14px;
+      color: $gray;
+      user-select: none;
+    }
+    .sbtc_qty_error {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 12px;
+      color: $red;
+      line-height: 20px;
+      margin-left: 5px;
+    }
+  }
+}

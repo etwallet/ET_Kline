@@ -1,0 +1,11 @@
+@import "../config/Vars";
+.banner {
+  position: relative;
+  a {
+    display: block;
+    width: 100%;
+    height: 520px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}

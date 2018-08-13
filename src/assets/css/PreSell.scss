@@ -1,0 +1,136 @@
+@import "../../assets/css/config/Vars";
+.pre_sell_banner {
+  position: relative;
+  width: 100%;
+  height: 216px;
+  background: no-repeat center;
+}
+.pre_sell {
+  width: $content_width;
+  margin: 0 auto;
+  background-color: $white;
+  padding-bottom: 160px;
+
+  .pre_sell_content {
+    width: 716px;
+    margin: 40px auto 0 auto;
+    font-size: 16px;
+    line-height: 26px;
+    .price {
+      margin-top: 10px;
+      span {
+        font-size: 20px;
+      }
+    }
+    .trade_message_box {
+      margin-top: 10px;
+      /deep/ textarea {
+        cursor: text;
+        width: 710px;
+        resize: none;
+        color: $dGray;
+      }
+    }
+    .limit {
+      height: 90px;
+      margin-top: 30px;
+      font-size: 14px;
+      input {
+        width: 326px;
+        height: 50px;
+        border: 1px solid $lGray;
+        font-size: 22px;
+        text-indent: 20px;
+      }
+
+      .crypto {
+        position: relative;
+        .flag {
+          position: absolute;
+          right: 20px;
+          top: 40px;
+          font-size: 20px;
+        }
+        span {
+          color: $red;
+        }
+      }
+
+      .convert {
+        text-align: center;
+        line-height: 98px;
+        .icon-zhuanhuan {
+          font-size: 36px;
+        }
+      }
+
+      .trade {
+        position: relative;
+        .flag {
+          position: absolute;
+          right: 20px;
+          top: 40px;
+          font-size: 20px;
+        }
+        span {
+          color: $red;
+        }
+      }
+    }
+    .message_box {
+      text-align: left;
+      margin-top: 20px;
+      padding-bottom: 30px;
+      /deep/ textarea{
+        width: 710px;
+        resize: none;
+      }
+
+      .iconfont {
+        cursor: pointer;
+        display: inline-block;
+        vertical-align: top;
+        transform: rotate(0deg);
+        transition: transform 0.3s;
+        color: $blue;
+        &.show {
+          transform: rotate(180deg);
+        }
+      }
+
+      .message_notice {
+        color: $red;
+      }
+    }
+    .confirm_btn {
+      width: 716px;
+      height: 50px;
+      background-color: $yellow;
+      transition: background-color 0.5s;
+      cursor: pointer;
+      color: $white;
+      text-align: center;
+      line-height: 50px;
+      font-size: 20px;
+      user-select: none;
+      &:hover{
+        background-color: $lYellow;
+      }
+      &.disable {
+        background-color: $lGray;
+        cursor: auto;
+      }
+    }
+
+  }
+
+  .notice_detail {
+    margin-top: 30px;
+    /deep/ p{
+      font-size: 16px;
+      color: $lGray;
+      padding:0 40px;
+      line-height: 26px;
+    }
+  }
+}

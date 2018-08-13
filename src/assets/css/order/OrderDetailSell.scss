@@ -1,0 +1,987 @@
+@import "../config/Vars";
+.order_zone{
+  width: 100%;
+  margin: 0 auto;
+  .order_tab_zone{
+    position: relative;
+    height: 48px;
+    border-radius: 3px 3px 0 0;
+    margin: 0 auto;
+    padding: 0 10px;
+    box-shadow: 0px 3px 3px #11141F;
+    background-color: #21232e;
+    ul{
+      float: left;
+      font-size: 16px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li{
+        float: left;
+        padding: 15px 20px;
+        padding-right: 0px;
+        cursor: pointer;
+        color: $table_td;
+        span{
+          margin-left: 10px;
+          color: $table_th;
+        }
+        .title_content{
+          color:#f25c49;
+          font-weight: 600;
+        }
+      }
+      .cur-min{
+        font-size: 14px;
+        line-height: 1.5;
+        padding-top:15px; 
+        padding-left: 10px;
+        color: $table_th;
+        .after_four{
+          color:$table_td;
+        }
+      }
+      .car-ico{
+        padding: 0px;
+      }
+    }
+  }
+}
+.order_detail_sell_banner {
+  width: 100%;
+  height: 216px;
+  background: no-repeat center;
+}
+.weaken{
+  color: #afafaf;
+}
+.after_four{
+  margin-left: 0px !important;
+}
+.hint{
+  color: $red;
+  font-size: 14px;
+}
+.top_warning {
+  width: 100%;
+  background-color: #9F2C38;
+  position: relative;
+  top:45px;
+  .warning_content {
+    box-sizing: border-box;
+    width: $content_width;
+    margin: 0 auto;
+    font-size: 20px;
+    color: rgba(255,255,255,.5);
+    line-height: 36px;
+    font-size: 14px;
+  }
+}
+.left_time_qa {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  height: 35px;
+  line-height: 35px;
+  width: 35px;
+  .icon {
+    font-size: 24px;
+    color: #3d9cee;
+    position: relative;
+    cursor: pointer;
+    top: 8px;
+    left: 6px;
+  }
+
+  &:hover {
+    .qa_content {
+      display: block;
+    }
+    .flag {
+      display: block;
+    }
+  }
+  .qa_content {
+    display: none;
+    position: absolute;
+    left: -10px;
+    top: 50px;
+    width: 360px;
+    box-sizing: border-box;
+    padding: 12px 16px;
+    background-color: $table_td;
+    font-size: 12px;
+    color: #9F2C38;
+    z-index: 999;
+    border-radius: 4px;
+    line-height: 16px;
+  }
+  .flag {
+    display: none;
+    position: absolute;
+    width:0;
+    height:0;
+    border-width:0 8px 8px;
+    border-style:solid;
+    border-color:transparent transparent $table_td;
+    top: 45px;
+    left: 8px;
+  }
+}
+.notice_content{
+  width: 1140px;
+  margin: 0 auto;
+  background-color: $dBg;
+  margin-top: 20px;
+  border-radius: 3px;
+  padding: 20px 30px;
+  line-height: 2.2;
+  color:$table_th;
+  position: relative;
+  .problem_btn{
+    position: absolute;
+    top:20px;
+    right:30px;
+    cursor: pointer;
+    line-height: 40px;
+    width: 120px;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 15px;
+    background: $trandeOrange;
+    color:$table_td;
+    box-shadow: 0px 3px 3px #11141F;
+    &.disable {
+      background-color: $table_th;
+      cursor: auto;
+      color:rgba(0,0,0,.3);
+    }
+  }
+  .problems{
+    .el-icon-warn-fill{
+      display: inline-block;
+      background: url("../../../assets/images/warn_fill.png") no-repeat;
+      background-size: 100% 100%;
+      width: 16px;
+      height: 16px;
+      margin-right: 6px;
+      vertical-align: middle;
+      position: relative;
+      top: -1px;
+    }
+  }
+  .notice_detail{
+    .el-icon-warn-fill{
+      display: inline-block;
+      background: url("../../../assets/images/warn_fill.png") no-repeat;
+      background-size: 100% 100%;
+      width: 16px;
+      height: 16px;
+      margin-right: 6px;
+      vertical-align: middle;
+      position: relative;
+      top: -1px;
+    }
+  }
+}
+.order_detail_sell {
+  width: $content_width;
+  margin: 0 auto;
+  background-color: $dBg;
+  padding-bottom: 30px;
+  margin-top: 65px;
+  border-radius: 3px;
+
+  .order_detail_sell_content {
+    position: relative;
+    width: 1140px;
+    margin: 26px auto 0 auto;
+    font-size: 16px;
+    line-height: 26px;
+    display: flex;
+    .order_detail{
+      width: 320px;
+      border-radius: 3px;
+      padding: 10px 20px;
+      margin-right: 30px;
+    }
+    .detail_item {
+      margin-bottom: 10px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      padding-bottom:6px;
+      color: $table_td;
+      p{
+        color: $table_th;
+        font-size: 12px;
+        margin-bottom: 4px;
+        .right{
+          float: right;
+        }
+      }
+      &.price {
+        span {
+          font-size: 12px;
+          font-weight: 300;
+        }
+      }
+      &.qty {
+        span {
+          font-weight: bold;
+        }
+      }
+      &.time {
+        span {
+          margin-left: 0px;
+          color:$table_th;
+        }
+      }
+      &.amount{
+        span {
+         font-size: 14px;
+        }
+        h3{
+          color:$blue;
+          font-size: 26px;
+        }
+      }
+      &.order{
+        span {
+          font-weight: bold;
+        }
+      }
+      &.disputed {
+        color: $red;
+      }
+      span{
+        margin-left: 6px;
+      }
+    }
+
+    .payment_method {
+      width: 360px;
+      border-radius: 3px;
+      margin-right: 30px;
+
+      .payment_tab {
+        display: flex;
+        position: relative;
+        background: $refresh;
+        box-shadow: 0px 3px 3px #11141F;
+        .payment {
+          vertical-align: top;
+          cursor: pointer;
+          padding: 10px;
+          color: $table_th;
+          position: relative;
+          .flag {
+            position: absolute;
+            display:block;
+            width:0;
+            height:0;
+            border-width:0 8px 8px;
+            border-style:solid;
+            border-color:transparent transparent $refresh;
+            top:52px;
+            left: 18px;
+          }
+          .alipay {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: url("../../../assets/images/trade/alipay-blue.png") no-repeat center;
+            vertical-align: middle;
+            position: relative;
+            top:-2px;
+            margin-right: 6px;
+          }
+          .wx {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: url("../../../assets/images/trade/wx-green.png") no-repeat center;
+            vertical-align: middle;
+            position: relative;
+            top:-2px;
+            margin-right: 6px;
+          }
+          .bank {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: url("../../../assets/images/trade/bank-pink.png") no-repeat center;
+            vertical-align: middle;
+            position: relative;
+            top:-2px;
+            margin-right: 6px;
+          }
+        }
+        .alipay-payment{
+          .flag {
+            position: absolute;
+            display:block;
+            width:0;
+            height:0;
+            border-width:0 8px 8px;
+            border-style:solid;
+            border-color:transparent transparent $refresh;
+            top:52px;
+            left: 18px;
+          }
+        }
+        .wx-payment{
+          .flag {
+            position: absolute;
+            display:block;
+            width:0;
+            height:0;
+            border-width:0 8px 8px;
+            border-style:solid;
+            border-color:transparent transparent $refresh;
+            top:52px;
+            left: 18px;
+          }
+        }
+        .bank-payment{
+          .flag {
+            position: absolute;
+            display:block;
+            width:0;
+            height:0;
+            border-width:0 8px 8px;
+            border-style:solid;
+            border-color:transparent transparent $refresh;
+            top:52px;
+            left: 18px;
+          }
+        }
+      }
+      .payment_content {
+        position: relative;
+        width: 100%;
+        height: 323px;
+        background-color: $refresh;
+        border-radius: 4px;
+        margin-top: 10px;
+        .payment_detil{
+          position: absolute;
+          left: 0px;
+          bottom:0px;
+          background: $refresh;
+          padding: 8px 0px;
+          width: 100%;
+          box-shadow: 0px -3px 3px #11141F;
+        }
+        .payment_alipay {
+          display: none;
+
+          &.show {
+            display: block;
+          }
+          .flag {
+            position: absolute;
+            display:block;
+            width:0;
+            height:0;
+            border-width:0 8px 8px;
+            border-style:solid;
+            border-color:transparent transparent $refresh;
+            top:-8px;
+            left:8px;
+          }
+          .payment_content_item {
+            color: $blue;
+            font-size: 14px;
+            line-height: 1.6;
+            text-indent: 20px;
+            span{
+              color:$table_th;
+              margin-right: 5px;
+            }
+          }
+
+          .payment_img {
+            padding: 20px;
+            cursor: pointer;
+            height: 240px;
+            text-align: center;
+            overflow: hidden;
+            img {
+              width: 60%;
+            }
+          }
+        }
+
+        .payment_wx {
+          display: none;
+          position: relative;
+          width: 100%;
+          height: 323px;
+          background-color: $refresh;
+          border-radius: 4px;
+          margin-top: 10px;
+          &.show {
+            display: block;
+          }
+          .flag {
+            position: absolute;
+            display:block;
+            width:0;
+            height:0;
+            border-width:0 8px 8px;
+            border-style:solid;
+            border-color:transparent transparent $refresh;
+            top:-8px;
+            left: 120px;
+          }
+
+          .payment_content_item {
+            color: $blue;
+            font-size: 14px;
+            line-height: 1.6;
+            text-indent: 20px;
+            span{
+              color:$table_th;
+              margin-right: 5px;
+            }
+          }
+
+          .payment_img {
+            padding: 20px;
+            cursor: pointer;
+            height: 240px;
+            overflow: hidden;
+            text-align: center;
+            img {
+              width: 60%;
+            }
+          }
+        }
+
+        .payment_bank {
+          display: none;
+
+          &.show {
+            display: block;
+          }
+          .flag {
+            position: absolute;
+            display:block;
+            width:0;
+            height:0;
+            border-width:0 8px 8px;
+            border-style:solid;
+            border-color:transparent transparent $refresh;
+            top:-8px;
+            left: 222px;
+          }
+          .bank-content{
+            padding: 10px 20px;
+          }
+
+          .payment_content_item {
+            padding-top: 8px;
+            color:$table_td;
+            font-size: 15px;
+            border-bottom:1px solid rgba(255,255,255,0.05);
+            margin-bottom: 6px;
+            line-height: 2.4;
+            span{
+              margin-right: 6px;
+              color: $table_th;
+              font-size: 12px;
+              line-height: 1.2;
+              display: inline-block;
+            }
+          }
+        }
+
+      }
+    }
+
+    .buyer_detail{
+      width: 360px;
+      background: #2b2d39;
+      border-radius: 3px;
+      .user_info_title{
+        box-shadow: 0px 3px 3px #11141F;
+        padding:0px 20px;
+        color: $table_td;
+        line-height: 3.15;
+        
+      }
+    }
+
+    .order_mask {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 750px;
+      height: 333px;
+      background-color: $white;
+      border-radius: 4px;
+      .take_time {
+        position: absolute;
+        left: 50%;
+        top: 30px;
+        margin-left: -60px;
+        width: 120px;
+        height: 40px;
+        font-size: 28px;
+      }
+
+      .order_mask_img {
+        position: absolute;
+        left: 45%;
+        top: 100px;
+        width: 150px;
+        height: 150px;
+        margin-left: -75px;
+        .waiting_img {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 148px;
+          height: 121px;
+          background: url("../../../assets/images/order/waiting_take.png") no-repeat center;
+        }
+
+        .waiting_flag {
+          position: absolute;
+          left: 110px;
+          top: -10px;
+          width: 44px;
+          height: 35px;
+          background: url("../../../assets/images/order/waiting_flag.png") no-repeat center;
+          animation: swing 1s infinite;
+        }
+
+        .taking_img {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 148px;
+          height: 121px;
+          background: url("../../../assets/images/order/waiting_take.png") no-repeat center;
+        }
+        .taking_flag {
+          position: absolute;
+          left: 110px;
+          top: -10px;
+          width: 44px;
+          height: 35px;
+          background: url("../../../assets/images/order/waiting_flag.png") no-repeat center;
+          animation: swing 1s infinite;
+        }
+
+        .close_img {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 129px;
+          height: 140px;
+          background: url("../../../assets/images/order/close.png") no-repeat center;
+        }
+
+        @keyframes swing {
+          10% {
+            transform: rotate3d(0, 0, 1, 15deg);
+          }
+
+          20% {
+            transform: rotate3d(0, 0, 1, -10deg);
+          }
+
+          30% {
+            transform: rotate3d(0, 0, 1, 5deg);
+          }
+
+          40% {
+            transform: rotate3d(0, 0, 1, -5deg);
+          }
+
+          50% {
+            transform: rotate3d(0, 0, 1, 0deg);
+          }
+
+          to {
+            transform: rotate3d(0, 0, 1, 0deg);
+          }
+        }
+      }
+
+      .calling_btn {
+        position: absolute;
+        left: 160px;
+        top: 255px;
+        width: 150px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        color: $gray;
+      }
+      .take_btn {
+        position: absolute;
+        left: 160px;
+        top: 255px;
+        width: 150px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        color: $white;
+        background-color: $yellow;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      .close_btn {
+        position: absolute;
+        left: 160px;
+        top: 255px;
+        width: 180px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        color: $gray;
+      }
+    }
+
+    .user_info {
+      padding: 20px;
+      .bottom_line{
+        border-bottom: 1px solid rgba(255,255,255,.05);
+        display: flex;
+        padding-bottom: 4px;
+      }
+      .user_info_zone{
+        flex:1;
+        
+      }
+      .user_info_name{
+        color:$blue;
+        font-size: 18px;
+        padding-left: 20px;
+        padding-top: 3px;
+        margin-bottom: 4px;
+      }
+      .user_avatar {
+        border:3px solid #fff;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        font-size: 24px;
+        color: $white;
+        border-radius: 75px;
+        background-color: #74deff;
+        overflow: hidden;
+        user-select: none;
+      }
+
+      .praise {
+        padding-left: 16px;
+        line-height: 20px;
+        span{
+          font-size: 12px;
+          margin: 0px 4px;
+          color: $table_th;
+          
+        }
+        .praise_icon {
+          display: inline-block;
+          width: 33px;
+          height: 33px;
+          background: url("../../../assets/images/trade/praise.png") no-repeat center;
+        }
+        .praise_content {
+          display: inline-block;
+          height: 33px;
+          vertical-align: top;
+          font-size: 16px;
+          color: $lGray;
+        }
+      }
+
+      .credit {
+        .credit_icon {
+          display: inline-block;
+          width: 33px;
+          height: 33px;
+          background: url("../../../assets/images/trade/credit.png") no-repeat center;
+        }
+        .credit_content {
+          display: inline-block;
+          height: 33px;
+          vertical-align: top;
+          line-height: 33px;
+          font-size: 16px;
+          color: $lGray;
+          margin-left: 10px;
+        }
+      }
+
+    }
+
+    .message {
+      .header{
+        font-size: 12px;
+        color:$table_th;
+        margin-top: 12px;
+      }
+      .content {
+        position: relative;
+        height: 163px;
+        text-indent: 24px;
+        font-size: 16px;
+        border-radius: 4px;
+
+        pre {
+          padding: 0;
+          margin: 0;
+          text-indent: 0;
+          white-space: pre-wrap;
+          word-wrap: break-word;
+          color: $table-td;
+          font-size: 14px;
+          font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","\5FAE\8F6F\96C5\9ED1",Arial,sans-serif;
+        }
+      }
+    }
+    .btn_group {
+      margin-top: 18px;
+      margin-bottom: 10px;
+      .paid {
+        display: inline-block;
+        width: 150px;
+        background-color: $blue;
+        border-radius: 4px;
+        color: $white;
+        text-align: center;
+        user-select: none;
+        margin-right: 50px;
+        cursor: pointer;
+        line-height: 3;
+        box-shadow: 0px 3px 3px #11141F;
+      }
+      .cancel {
+        display: inline-block;
+        width: 150px;
+        background-color: $tradeRed;
+        color: $white;
+        border-radius: 4px;
+        text-align: center;
+        user-select: none;
+        cursor: pointer;
+      }
+      .paid_over {
+        display: inline-block;
+        width: 150px;
+        background-color: $lGray;
+        border-radius: 4px;
+        text-align: center;
+        user-select: none;
+        margin-right: 50px;
+        cursor: pointer;
+      }
+      .released {
+        display: inline-block;
+        width: 150px;
+        background-color: $table_th;
+        border-radius: 4px;
+        color: rgba(0,0,0,.2);
+        text-align: center;
+        user-select: none;
+        cursor: pointer;
+        line-height: 3;
+        box-shadow: 0px 3px 3px #11141F;
+      }
+      .canceled {
+        display: inline-block;
+        width: 150px;
+        background-color: $table_th;
+        border-radius: 4px;
+        color: rgba(0,0,0,.2);
+        text-align: center;
+        user-select: none;
+        margin-right: 50px;
+        cursor: pointer;
+        line-height: 3;
+        box-shadow: 0px 3px 3px #11141F;
+      }
+    }
+  }
+  .divider {
+    width: 1100px;
+    height: 2px;
+    background-color: $vlGray;
+    margin: 0 auto;
+  }
+  .notice_content {
+    width: 1050px;
+    height: 280px;
+    margin: 0 auto 0 auto;
+    position: relative;
+
+    .message {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 500px;
+      height: 270px;
+      font-size: 16px;
+
+      .content {
+        position: relative;
+        width: 100%;
+        height: 170px;
+        background-color: #f1f1f1;
+        margin-top: 10px;
+        text-indent: 24px;
+        font-size: 16px;
+        padding: 10px;
+        border-radius: 4px;
+        
+
+        .flag {
+          position: absolute;
+          display:block;
+          width:0;
+          height:0;
+          border-width:0 8px 8px;
+          border-style:solid;
+          border-color:transparent transparent $vlGray;
+          position:absolute;
+          top:-8px;
+          left:40px;
+        }
+        pre {
+          padding: 0;
+          margin: 0;
+          text-indent: 0;
+          white-space: pre-wrap;
+          word-wrap: break-word;
+          color:$table_th;
+        }
+      }
+    }
+    .problems{
+      position: absolute;
+      right: 140px;
+      top: 0;
+      width: 363px;
+      height: 40px;
+      font-size: 16px;
+      .icon-fanhui-copy {
+        cursor: pointer;
+        color: $blue;
+        margin-right: 10px;
+      }
+
+      .problems_content {
+        position: absolute;
+        width: 100%;
+        height: 160px;
+        top: 30px;
+        left: 0;
+        background-color: $lGreen;
+        border-radius: 4px;
+        .notice {
+          padding: 10px 20px;
+          font-size: 12px;
+          line-height: 22px;
+        }
+        .problem_btn {
+          margin-left: 20px;
+          margin-top: 10px;
+          width: 150px;
+          height: 26px;
+          line-height: 26px;
+          font-size: 16px;
+          background-color: $yellow;
+          border-radius: 4px;
+          color: $white;
+          text-align: center;
+          user-select: none;
+          cursor: pointer;
+
+          &.disable {
+            background-color: $lGray;
+            cursor: auto;
+          }
+        }
+      }
+    }
+
+    .notice_detail {
+      margin-top: 30px;
+      font-size: 16px;
+      width: 500px;
+      color: $lGray;
+      &.blue {
+        color: $blue;
+      }
+      &.red {
+        color: red;
+      }
+    }
+  }
+}
+/deep/ .el-dialog__wrapper {
+  .img {
+    width: 400px;
+    margin: 0 auto;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.img_dialog {
+  /deep/ .el-dialog {
+    width: 420px;
+
+    .el-dialog__body {
+      width: 420px;
+      padding: 20px 0;
+    }
+  }
+}
+
+.release_notice {
+  color: $red;
+  font-size: 14px;
+  margin-top: 10px;
+  padding: 0 10px;
+}
+/deep/ .el-dialog__wrapper  {
+  .el-dialog {
+    width: 600px;
+  }
+  .el-dialog__body {
+    padding: 30px 20px 0px 20px;
+  }
+  .el-dialog__footer {
+    padding: 20px 20px 15px;
+  }
+  .input_group {
+    width: 100%;
+    margin-top: 20px;
+    .pwd_label {
+      display: inline-block;
+      width: 20%;
+      min-width: 60px;
+      line-height: 20px;
+    }
+    .pwd_input {
+      display: inline-block;
+      width: 50%;
+    }
+    .pwd_error {
+      display: inline-block;
+      width: 20%;
+      font-size: 12px;
+      color: $red;
+      line-height: 20px;
+      margin-left: 5px;
+    }
+  }
+}

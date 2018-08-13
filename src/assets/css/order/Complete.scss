@@ -1,0 +1,292 @@
+@import "../config/Vars";
+.order_zone{
+  width: 1200px;
+  margin: 0 auto;
+  .order_tab_zone{
+    position: relative;
+    height: 48px;
+    border-radius: 3px 3px 0 0;
+    margin: 0 auto;
+    padding: 0 10px;
+    box-shadow: 0px 3px 3px #11141F;
+    overflow: hidden;
+    background-color: #21232e;
+    z-index: 1;
+    ul{
+      float: left;
+      font-size: 16px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li{
+        float: left;
+        padding: 15px 20px;
+        cursor: pointer;
+        color: $white;
+      }
+    }
+    .crypto_top_choise{
+      float: right;
+      padding-top: 7px;
+      width: 155px;
+      .crypto_currency_select{
+        background: transparent;
+        /deep/ .el-input{
+          background: transparent;
+        }
+        /deep/ input{
+          background: $blue;
+          color: $white;
+          border: 0px;
+        }
+      }
+    }
+  }
+}
+.router-link-active{
+  li{
+    color:$blue !important;
+  }
+}
+.order_complete {
+  width: $content_width;
+  margin: 65px auto 0 auto;
+  background-color: $dBg;
+  .left {
+    width: 181px;
+    float: left;
+  }
+  .table-zone {
+    position: relative;
+    min-height: 102px;
+    padding-bottom: 10px;
+    .crypto_currency_select {
+      margin-left: 30px;
+      margin-top: 10px;
+    }
+    
+    .table {
+      width: 1170px;
+      margin: 10px auto 0 auto;
+      table {
+        border-collapse:collapse;
+        border: none;
+        color:$title;
+        text-align: left;
+        thead {
+          height: 40px;
+          th {
+            height: 40px;
+            padding: 0 16px;
+            color: $lGray;
+            font-size: 14px;
+            font-weight: 400;
+            color: $title;
+          }
+          th:nth-child(1){
+            width: 230px;
+          }
+          th:nth-child(2){
+            width: 170px;
+          }
+          th:nth-child(3){
+            width: 150px;
+          }
+          th:nth-child(4){
+            width: 150px;
+          }
+          th:nth-child(5){
+            width: 150px;
+          }
+          th:nth-child(6){
+            width: 170px;
+          }
+          th:nth-child(7){
+            width: 150px;
+          }
+        }
+
+        tbody {
+          .table_name{
+            width: 85px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            display: inline-block;
+            vertical-align: middle;
+          }
+          .weaken{
+            color: #a8dbff;
+          }
+          &:hover {
+            color: #343744;
+            a {
+              color: #343744;
+              .weaken{
+                color: #343744;
+              }
+            }
+            .is_buy{
+              color: #343744;
+            }
+            .is_sell{
+              color: #343744;
+            }
+            .object-tx{
+              background: #343744;
+              color: rgba(255,255,255,.05)
+            }
+          }
+           tr:nth-of-type(odd) {
+              background-color: $noticeBg;
+            }
+          tr{
+            &:hover {
+              color: $title;
+              a {
+                color: $blue;
+                .weaken{
+                  color: #a8dbff;
+                }
+              }
+              .is_buy{
+                color: $trandtopGreen
+              }
+              .is_sell{
+                color: $trandeOrange
+              }
+              .object-tx{
+                background: #3d9cee;
+                background-size: 100% 100%;
+                font-style:normal;
+                color:#fff;
+              }
+            }
+            .is_buy{
+              color: $trandtopGreen
+            }
+            .is_sell{
+              color: $trandeOrange
+            }
+            .object-tx{
+              width: 40px;
+              height: 40px;
+              background: #3d9cee;
+              background-size: 100% 100%;
+              border-radius: 100%;
+              display: inline-block;
+              vertical-align: middle;
+              margin: 15px 0px;
+              margin-right: 16px;
+              font-style:normal;
+              color:#fff;
+              font-size: 17px;
+              line-height: 41px;
+              text-align: center
+            }
+            td {
+              text-align: left;
+              padding: 0px 16px;
+              font-size: 14px;
+              height: 40px;
+              a{
+                text-decoration: none;
+                color: $blue;
+                letter-spacing: 1px;
+                font-weight: bold;
+              }
+              &.manage {
+                color: $blue;
+                a {
+                  cursor: pointer;
+                  margin-left: 5px;
+                }
+              }
+            }
+            .ft-white{
+              color:#bcc0d1;
+              font-weight: 600;
+            }
+            td:nth-child(1){
+              width: 230px;
+            }
+            td:nth-child(2){
+              text-decoration: underline;
+              width: 170px;
+            }
+            td:nth-child(3){
+              width: 170px;
+            }
+            td:nth-child(4){
+              width: 170px;
+            }
+            td:nth-child(5){
+              width: 170px;
+            }
+            td:nth-child(6){
+              width: 170px;
+            }
+            td:nth-child(7){
+              width: 150px;
+            }
+          }
+        }
+      }
+
+      .pagination {
+        bottom: 20px;
+        left: 0;
+        width: 100%;
+        padding: 20px 0px;
+        text-align: center;
+        /deep/ .el-pager li.active {
+          border: 1px solid $blue;
+          background-color: $blue;
+          color: $white;
+          &:hover {
+            color: $white;
+          }
+        }
+        /deep/ .el-pager li {
+          height: 30px;
+          width: 30px;
+          border-radius: 100%;
+          margin-right: 20px;
+          border: 1px solid $refresh_zone;
+          line-height: 30px;
+          color: $refresh_zone;
+          background: transparent;
+        }
+        /deep/ button{
+          height: 30px;
+          width: 30px;
+          padding: 0px;
+          .el-icon{
+            font-size: 10px;
+          }
+        }
+        
+        /deep/ .btn-prev{
+          border-radius: 100%;
+          background: $refresh_zone;
+          border: 0px;
+          margin-right: 20px;
+        }
+        /deep/ .btn-next{
+          border-radius: 100%;
+          background: $refresh_zone;
+          border: 0px;
+        }
+        .el-pager li:hover {
+          color: $yellow;
+        }
+        .el-pagination button:hover{
+          color: $yellow;
+        }
+      }
+    }
+  }
+  .clear {
+    clear: both;
+  }
+}

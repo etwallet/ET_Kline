@@ -1,0 +1,174 @@
+@import "../config/Vars";
+.currency-zone{
+  background: #2e3140;
+  text-align: center;
+  color:$white;
+  font-size: 24px;
+  padding-top:14px;
+  padding-bottom: 10px;
+  span{
+    i{
+      display: inline-block;
+      width:38px;
+      height: 38px;
+      margin-right: 15px;
+      background-size: 100%;
+      line-height: 0px;
+      vertical-align: middle;
+      position: relative;
+    }
+    .osc_ico{
+      background: url("../../../assets/images/exchange/osc_ico.png") no-repeat center;
+      background-size: 100%;
+      top:-2px;
+    }
+    .dgc_ico{
+      background: url("../../../assets/images/exchange/dgc_ico.png") no-repeat center;
+      background-size: 100%;
+      top:-2px;
+    }
+
+  }
+}
+.select_menu {
+  position: relative;
+  height: 65px;
+  width: 1200px;
+  font-size: 28px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  .current {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 240px;
+    height: 65px;
+    line-height: 65px;
+    text-align: left;
+    color:$table_td;
+    i{
+      color:$table_td;
+    }
+    &:hover {
+      .select_info {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    span{
+      i{
+        display: inline-block;
+        width:38px;
+        height: 38px;
+        margin-right: 15px;
+        background-size: 100%;
+        line-height: 0px;
+        vertical-align: middle;
+        position: relative;
+      }
+      .osc_ico{
+        background: url("../../../assets/images/exchange/osc_ico.png") no-repeat center;
+        background-size: 100%;
+        top:-2px;
+      }
+      .dgc_ico{
+        background: url("../../../assets/images/exchange/dgc_ico.png") no-repeat center;
+        background-size: 100%;
+        top:-2px;
+      }
+
+    }
+    .select_info {
+      position: absolute;
+      top: 45px;
+      left: 0;
+      width: 300px;
+      background-color: $lBlue;
+      z-index: 999;
+      transition: opacity 0.2s;
+      opacity: 0;
+      visibility: hidden;
+      text-align: left;
+
+      &.hide:hover {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .currency_category {
+        height: 100%;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        .currency_category_item {
+          float: left;
+          height: 100%;
+          width: 149px;
+          text-indent: 16px;
+          &:first-child {
+            border-right: 1px solid $white;
+          }
+          .category_name {
+            background-color: $yellow;
+            height: 40px;
+            line-height: 40px;
+            color: $white;
+          }
+          ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            li {
+              width: 149px;
+              margin-left: 12px;
+              line-height: 40px;
+              border-bottom: 1px solid $lGray;
+              text-indent: 4px;
+              cursor: pointer;
+              font-size: 14px;
+
+              &.active {
+                color: $blue;
+              }
+
+              &:hover {
+                color: $blue;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .exchange_info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 60px;
+    font-size: 14px;
+    text-align: center;
+    color: $dGray;
+
+    .info_item {
+      display: inline-block;
+      vertical-align: top;
+      padding:0px 26px;
+      padding-top: 25px;
+      color:$table_th;
+      font-size: 12px;
+      span {
+        font-size: 12px;
+        line-height: 24px;
+
+        &.red {
+          color: $tradeRed;
+        }
+
+        &.green {
+          color: $tradeGreen;
+        }
+      }
+    }
+  }
+}

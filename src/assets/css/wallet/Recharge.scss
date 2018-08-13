@@ -1,0 +1,388 @@
+@import "../config/Vars";
+.order_tab_zone {
+  position: relative;
+  height: 48px;
+  border-radius: 3px 3px 0 0;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 0 10px;
+  box-shadow: 0px 3px 3px #11141f;
+  overflow: hidden;
+  background-color: #21232e;
+  z-index: 1;
+  ul {
+    float: left;
+    font-size: 16px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      float: left;
+      padding: 15px 20px;
+      cursor: pointer;
+      color: $white;
+    }
+  }
+}
+.order_zone {
+  background-color: #21232e;
+  padding-bottom: 30px;
+}
+.wallet_recharge {
+  width: $content_width;
+  margin: 20px auto 0 auto;
+  padding-bottom: 135px;
+  padding-top: 45px;
+  .wallet_title {
+    font-size: 18px;
+    color: #c7cce6;
+    line-height: 2.8;
+    background: $dBg;
+    padding: 0px 30px;
+    margin-bottom: 20px;
+  }
+  .left {
+    width: 220px;
+    float: left;
+  }
+  .error_notice {
+    color: #ff4551 !important;
+    font-size: 12px !important;
+    line-height: 40px !important;
+    margin-left: 12px !important;
+  }
+  .right {
+    width: 960px;
+    min-height: 292px;
+    float: right;
+    border-radius: 3px;
+    position: relative;
+
+    .right-top {
+      background-color: $dBg;
+      border-radius: 3px;
+      padding-bottom: 30px;
+    }
+    .crypto_top_choise {
+      padding-top: 10px;
+      width: 155px;
+      padding-left: 10px;
+      /deep/ input {
+        background: $blue;
+        color: $white;
+        border: 0px;
+      }
+    }
+    .address_detail_title {
+      font-size: 12px;
+      color: $table_th;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+    .address_detail_title_two {
+      font-size: 12px;
+      color: $table_th;
+      line-height: 1;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    .before_recharge {
+      color: #fff;
+      background: #ae4e54;
+      line-height: 1.5;
+      padding: 5px 10px;
+      font-size: 12px;
+      border-radius: 3px;
+      margin-bottom: 12px;
+    }
+    .recharge_content {
+      width: 898px;
+      margin: 10px auto 0 auto;
+      line-height: 40px;
+      font-size: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 3px;
+      .wallet_address {
+        font-size: 14px;
+        .big_address {
+          font-size: 20px;
+          margin-left: 0px !important;
+          color: $table_td !important;
+          line-height: 1;
+        }
+        .address_detail {
+          display: flex;
+
+          .address_input {
+            width: 50px;
+            /deep/ .el-input-group__append {
+              cursor: pointer;
+              padding: 0;
+              background: transparent;
+              border: 0px;
+              .copy {
+                width: 50px;
+                text-align: right;
+                color: $blue;
+              }
+            }
+            /deep/ input {
+              background: transparent;
+              border: 0px;
+              padding: 0px;
+              width: 1px;
+              height: 1px;
+            }
+          }
+          .osc_address_input {
+            width: 400px;
+            /deep/ .el-input-group__append {
+              cursor: pointer;
+              padding: 0;
+              background: transparent;
+              border: 0px;
+              .copy {
+                width: 50px;
+                text-align: right;
+                color: $blue;
+              }
+            }
+            /deep/ input {
+              background: rgba(255, 255, 255, 0.03);
+              border: 1px solid #42465a;
+              font-size: 14px;
+              color: $table_td;
+            }
+          }
+          span {
+            margin-left: 0px;
+            color: $blue;
+            font-size: 20px;
+            line-height: 1;
+            &.new {
+              cursor: pointer;
+            }
+          }
+        }
+        .address_qrcode {
+          position: relative;
+          display: inline-block;
+          line-height: 1;
+          margin-left: 20px;
+          .icon-qrcode {
+            font-size: 24px;
+            color: $blue;
+            position: relative;
+            top: -1px;
+          }
+          .qrcode {
+            position: absolute;
+            bottom: -100px;
+            left: 0px;
+            display: none;
+          }
+
+          &:hover {
+            .qrcode {
+              display: block;
+            }
+          }
+        }
+        .address_btn_group {
+          display: inline-block;
+          float: right;
+          .btn {
+            display: inline-block;
+            margin-left: 20px;
+            line-height: 2.4;
+            background: #3d9cee;
+            border: 0px;
+            color: #ffffff;
+            padding: 0px 20px;
+            border-radius: 4px;
+            text-align: center;
+            user-select: none;
+            cursor: pointer;
+          }
+        }
+      }
+      .recharge_notice {
+        line-height: 24px;
+        margin-top: 30px;
+        color: $table_th;
+        font-size: 12px;
+      }
+      .dialog_table {
+        max-width: 700px;
+        margin: 0 auto;
+      }
+    }
+    .pagination {
+      bottom: 20px;
+      left: 0;
+      width: 100%;
+      padding: 20px 0px;
+      text-align: center;
+      /deep/ .el-pager li.active {
+        border: 1px solid $blue;
+        background-color: $blue;
+        color: $white;
+        &:hover {
+          color: $white;
+        }
+      }
+      /deep/ .el-pager li {
+        height: 30px;
+        width: 30px;
+        border-radius: 100%;
+        margin-right: 20px;
+        border: 1px solid $refresh_zone;
+        line-height: 30px;
+        color: $refresh_zone;
+        background: transparent;
+      }
+      /deep/ button {
+        height: 30px;
+        width: 30px;
+        padding: 0px;
+        .el-icon {
+          font-size: 10px;
+        }
+      }
+
+      /deep/ .btn-prev {
+        border-radius: 100%;
+        background: $refresh_zone;
+        border: 0px;
+        margin-right: 20px;
+      }
+      /deep/ .btn-next {
+        border-radius: 100%;
+        background: $refresh_zone;
+        border: 0px;
+      }
+      .el-pager li:hover {
+        color: $yellow;
+      }
+      .el-pagination button:hover {
+        color: $yellow;
+      }
+    }
+    .table {
+      width: 900px;
+      margin: 0px auto 0 auto;
+      table {
+        border-collapse: collapse;
+        border: none;
+        thead {
+          height: 40px;
+          background-color: transparent;
+          th {
+            height: 40px;
+            padding: 0;
+            color: #61718a;
+            font-size: 12px;
+            font-weight: normal;
+          }
+          th:nth-child(1) {
+            width: 300px;
+            text-align: left;
+          }
+          th:nth-child(2) {
+            width: 180px;
+            text-align: right;
+          }
+          th:nth-child(3) {
+            width: 180px;
+            text-align: right;
+          }
+          th:nth-child(4) {
+            width: 220px;
+            text-align: right;
+          }
+        }
+
+        tbody {
+          tr {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            td {
+              text-align: center;
+              font-size: 14px;
+              height: 44px;
+              color: #c7cce6;
+              a {
+                text-decoration: none;
+                color: $blue;
+              }
+              &.manage {
+                color: $blue;
+                a {
+                  cursor: pointer;
+                  margin-left: 5px;
+                }
+              }
+            }
+            td:nth-child(1) {
+              width: 300px;
+              text-align: left;
+            }
+            td:nth-child(2) {
+              width: 180px;
+              text-align: right;
+            }
+            td:nth-child(3) {
+              width: 180px;
+              text-align: right;
+            }
+            td:nth-child(4) {
+              width: 220px;
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
+  }
+  .clear {
+    clear: both;
+  }
+  .hint {
+    color: $red;
+    margin-left: 40px;
+  }
+  .singrc-btn {
+    display: inline-block;
+    margin-left: 10px;
+    width: 90px;
+    height: 26px;
+    line-height: 26px;
+    background-color: $yellow;
+    border-radius: 4px;
+    color: $white;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+    padding: 0px;
+    border-color: $yellow;
+  }
+  .singrc-btn:hover {
+    border-color: $yellow;
+  }
+  .hint-btn {
+    background: #c22247;
+    border: 1px solid #c22247;
+  }
+  .el-button--info {
+    background-color: $yellow;
+    border-color: $yellow;
+  }
+}
+.my-btn {
+  margin-left: 20px;
+  height: 36px;
+  margin-top: 2px;
+  background: $blue;
+  border: 0px;
+  color: $white;
+}

@@ -1,0 +1,179 @@
+@import "../config/Vars";
+.market_sell {
+  width: $content_width;
+  margin: 65px auto 0 auto;
+  padding-bottom: 135px;
+  .wallet_title{
+    font-size: 18px;
+    color: #C7CCE6;
+    line-height: 2.8;
+    background: $dBg;
+    padding:0px 30px;
+    margin-bottom: 20px;
+    position: relative;
+    .advert-btn{
+      background: $blue;
+      background: #3d9cee;
+      font-size: 14px;
+      color: #ffffff;
+      border: 0px;
+      border-radius: 4px;
+      position: absolute;
+      top: 9px;
+      right: 25px;
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+  }
+  .left {
+    width: 220px;
+    float: left;
+  }
+  .right {
+    width: 100%;
+    min-height: 292px;
+    background-color: $dBg;
+    border-radius: 3px;
+
+    .crypto_currency_select {
+      margin-left: 30px;
+      margin-top: 10px;
+      display: none;
+    }
+    .table {
+      width: 1140px;
+      margin: 10px auto 0 auto;
+      table {
+        border-collapse:collapse;
+        border: none;
+        width: 100%;
+        thead {
+          height: 40px;
+          background-color: transparent;
+          th {
+            height: 40px;
+            padding: 0;
+            color: #61718a;
+            font-size: 12px;
+            font-weight: normal;
+          }
+          th:nth-child(1){
+            width: 188px;
+            text-align: left;
+          }
+          th:nth-child(2){
+            width: 170px;
+            text-align: right;
+          }
+          th:nth-child(3){
+            width: 170px;
+            text-align: right;
+          }
+          th:nth-child(4){
+            width: 170px;
+            text-align: right;
+          }
+          th:nth-child(5){
+            width: 180px;
+            text-align: right;
+          }
+          th:nth-child(6){
+            width: 180px;
+            text-align: right;
+          }
+          th:nth-child(7){
+            width: 180px;
+            text-align: right;
+          }
+        }
+
+        tbody {
+          tr{
+            border-bottom: 1px solid rgba(255,255,255,.05);
+            td {
+              text-align: center;
+              font-size: 14px;
+              height: 44px;
+              color:#C7CCE6;
+              a{
+                text-decoration: none;
+                color: $blue;
+                cursor: pointer;
+                margin-left: 5px;
+                &.del {
+                  color: $red;
+                }
+              }
+              &.manage {
+                color: $blue;
+                a {
+                  cursor: pointer;
+                  margin-left: 5px;
+                }
+              }
+            }
+            .is_buy{
+              color:#43cb83;
+            }
+            .is_sell{
+              color:#f25c49;
+            }
+            td:nth-child(1){
+              width: 188px;
+              text-align: left;
+            }
+            td:nth-child(2){
+              width: 170px;
+              text-align: right;
+            }
+            td:nth-child(3){
+              width: 170px;
+              text-align: right;
+            }
+            td:nth-child(4){
+              width: 170px;
+              text-align: right;
+            }
+            td:nth-child(5){
+              width: 180px;
+              text-align: right;
+            }
+            td:nth-child(6){
+              width: 180px;
+              text-align: right;
+            }
+            td:nth-child(7){
+              width: 180px;
+              text-align: right;
+            }
+          }
+        }
+      }
+
+      .pagination {
+        position: absolute;
+        left: 0;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+        /deep/ .el-pager li.active {
+          border-color: #d1dbe5;
+          background-color: $yellow;
+
+          &:hover {
+            color: $white;
+          }
+        }
+        .el-pager li:hover {
+          color: $yellow;
+        }
+        .el-pagination button:hover{
+          color: $yellow;
+        }
+      }
+    }
+  }
+  .clear {
+    clear: both;
+  }
+}

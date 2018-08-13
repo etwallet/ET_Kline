@@ -1,0 +1,364 @@
+@import "../config/Vars";
+.order_tab_zone{
+  position: relative;
+  height: 48px;
+  border-radius: 3px 3px 0 0;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 0 10px;
+  box-shadow: 0px 3px 3px #11141F;
+  overflow: hidden;
+  background-color: #21232e;
+  z-index: 1;
+  ul{
+    float: left;
+    font-size: 16px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li{
+      float: left;
+      padding: 15px 20px;
+      cursor: pointer;
+      color: $white;
+    }
+  }
+}
+.order_zone{
+  background-color: #21232e;
+  padding-bottom:30px;
+}
+.wallet_withdraw {
+  width: $content_width;
+  margin: 20px auto 0 auto;
+  padding-bottom: 135px;
+  padding-top: 45px;
+  .wallet_title{
+    font-size: 18px;
+    color: #C7CCE6;
+    line-height: 2.8;
+    background: $dBg;
+    padding:0px 30px;
+    margin-bottom: 20px;
+  }
+  .left {
+    width: 220px;
+    float: left;
+  }
+  .right {
+    width: 960px;
+    min-height: 292px;
+    float: right;
+    border-radius: 3px;
+    position: relative;
+    .right-top{
+      background-color: $dBg;
+      border-radius: 3px;
+      padding-bottom: 30px;
+    }
+    .crypto_top_choise{
+      padding-top: 10px;
+      width: 155px;
+      padding-left: 10px;
+      /deep/ input{
+        background: $blue;
+        color: $white;
+        border: 0px;
+      }
+    }
+    .osc_address_input {
+      width: 400px;
+      /deep/ .el-input-group__append {
+        cursor: pointer;
+        padding: 0;
+        background: transparent;
+        border: 0px;
+        .copy {
+          width: 50px;
+          text-align: right;
+          color: $blue;
+        }
+      }
+      /deep/ input{
+        background: rgba(255,255,255,.03);
+        border: 1px solid #42465a;
+        font-size: 14px;
+        color: $table_td;
+      }
+    }
+    .withdraw_content {
+      width: 898px;
+      margin: 10px auto 0 auto;
+      line-height: 40px;
+      font-size: 14px;
+      border: 1px solid rgba(255,255,255,.1);
+      padding: 10px 20px 10px 20px;
+      border-radius: 3px;
+      .input-two-zone{
+        display: table;
+        width: 100%;
+      }
+      .input-left{
+        width: 439px;
+        float: left;
+      }
+      .input-right{
+        width: 439px;
+        float:right;
+      }
+      .input-title{
+        line-height: 1;
+        margin-top: 20px;
+        margin-bottom: 8px;
+        color: $table_th;
+        span{
+          float: right;
+          .blue{
+            margin-left: 4px;
+            color: $blue;
+          }
+        }
+      }
+      .withdraw_form {
+        .withdraw_input {
+          /deep/ .el-input-group__append {
+            cursor: pointer;
+            padding: 0;
+            background: transparent;
+            border: 0px;
+            .copy {
+              width: 50px;
+              text-align: right;
+              color: $blue;
+            }
+          }
+          /deep/ .el-input__inner{
+            background: rgba(255,255,255,.03);
+            border: 1px solid #42465a;
+            color: $table_td;
+            font-size: 14px;
+            padding:0px 22px;
+          }
+          // /deep/ input{
+          //   background: rgba(255,255,255,.03);
+          //   border: 1px solid #42465a;
+          //   font-size: 14px;
+          //   color: $table_td;
+          //   padding: 22px;
+          // }
+        }
+        /deep/ .el-form-item{
+          margin-bottom: 0px;
+        }
+        /deep/ .el-form-item .el-form-item__content {
+          &>span{
+            color: $lGray;
+          }
+        }
+
+        /deep/ .el-form-item__error {
+          // left: 520px;
+          position: relative;
+          top: 3px;
+        }
+        .qty {
+          position: absolute;
+          right: 20px;
+          top: 0;
+          height: 46px;
+          text-align: center;
+          color: $lGray;
+          cursor: pointer;
+          font-size: 16px;
+          line-height: 47px;
+          color: $table_td;
+        }
+        .crypto_currency {
+          position: absolute;
+          left: 460px;
+          top: 0;
+          height: 36px;
+          text-align: center;
+          color: $lGray;
+          cursor: pointer;
+        }
+        .send_code {
+          position: absolute;
+          right: 20px;
+          top: 0;
+          height: 46px;
+          text-align: center;
+          color: #3d9cee;
+          /* width: 80px; */
+          cursor: pointer;
+          line-height: 46px;
+        }
+      }
+      .box_bottom {
+        margin-top: 20px;
+        margin-bottom:0px;
+        width: 100%;
+        display: flex;
+        line-height: 2;
+        color: $table_th;
+        span{
+          width: 100%;
+          text-align: left;
+          .blue{
+            color: $blue;
+          }
+        }
+        .button {
+          height: 46px;
+          display: inline-block;
+          font-size: 16px;
+          min-width: 120px;
+          margin-top: 10px;
+          margin-bottom: 20px;
+          line-height: 46px;
+          background: #3d9cee;
+          border: 0px;
+          color: #ffffff;
+          padding: 0px 20px;
+          border-radius: 4px;
+          text-align: center;
+          user-select: none;
+          cursor: pointer;
+          &:hover {
+            background-color: $lYellow;
+          }
+        }
+
+      }
+    }
+    .pagination {
+      bottom: 20px;
+      left: 0;
+      width: 100%;
+      padding: 20px 0px;
+      text-align: center;
+      /deep/ .el-pager li.active {
+        border: 1px solid $blue;
+        background-color: $blue;
+        color: $white;
+        &:hover {
+          color: $white;
+        }
+      }
+      /deep/ .el-pager li {
+        height: 30px;
+        width: 30px;
+        border-radius: 100%;
+        margin-right: 20px;
+        border: 1px solid $refresh_zone;
+        line-height: 30px;
+        color: $refresh_zone;
+        background: transparent;
+      }
+      /deep/ button{
+        height: 30px;
+        width: 30px;
+        padding: 0px;
+        .el-icon{
+          font-size: 10px;
+        }
+      }
+      
+      /deep/ .btn-prev{
+        border-radius: 100%;
+        background: $refresh_zone;
+        border: 0px;
+        margin-right: 20px;
+      }
+      /deep/ .btn-next{
+        border-radius: 100%;
+        background: $refresh_zone;
+        border: 0px;
+      }
+      .el-pager li:hover {
+        color: $yellow;
+      }
+      .el-pagination button:hover{
+        color: $yellow;
+      }
+    }
+    .table {
+      width: 900px;
+      margin: 0px auto 0 auto;
+      table {
+        border-collapse:collapse;
+        border: none;
+        thead {
+          height: 40px;
+          background-color: transparent;
+          th {
+            height: 40px;
+            padding: 0;
+            color: #61718a;
+            font-size: 12px;
+            font-weight: normal;
+          }
+          th:nth-child(1){
+            width:300px;
+            text-align: left;
+          }
+          th:nth-child(2){
+            width: 180px;
+            text-align: right;
+          }
+          th:nth-child(3){
+            width: 180px;
+            text-align: right;
+          }
+          th:nth-child(4){
+            width: 220px;
+            text-align: right;
+          }
+        }
+
+        tbody {
+          tr{
+            border-bottom: 1px solid rgba(255,255,255,.05);
+            td {
+              text-align: center;
+              font-size: 14px;
+              height: 44px;
+              color:#C7CCE6;
+              a{
+                text-decoration: none;
+                color: $blue;
+              }
+              &.manage {
+                color: $blue;
+                a {
+                  cursor: pointer;
+                  margin-left: 5px;
+                }
+              }
+            }
+            td:nth-child(1){
+              width: 300px;
+              text-align: left;
+            }
+            td:nth-child(2){
+              width: 180px;
+              text-align: right;
+            }
+            td:nth-child(3){
+              width: 180px;
+              text-align: right;
+            }
+            td:nth-child(4){
+              width: 220px;
+              text-align: right;
+            }
+          }
+        }
+      }
+
+    }
+  }
+  .clear {
+    clear: both;
+  }
+}

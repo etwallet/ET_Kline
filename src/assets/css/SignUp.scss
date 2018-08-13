@@ -1,0 +1,263 @@
+@import "./config/Vars";
+
+.sign_up_big{
+  // background:  url("../../assets/images/login_bg.png") repeat center center
+}
+.pw-nosame{
+  position: relative;
+  top:12px;
+  background: #fdfae0;
+  color:#666;
+  padding: 0px 12px;
+  line-height: 2.2;
+}
+.sign_up {
+  width: $content_width;
+  margin: 0 auto;
+  background-color: transparent;
+  padding: 125px 0 123px 0;
+  .sign_up_zone{
+    width: 940px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 1px 1px 8px rgba(0,0,0,.15);
+    background: $white;
+    margin: 0 auto;
+    display: flex;
+    .sign_up_zone_left{
+      width: 380px;
+      background: linear-gradient(45deg,#ddd 0,#f7f7f7 100%);
+      background-size: 100%;
+      .sign_up_zone_left_content{
+        padding: 60px 50px; 
+      }
+      h4{
+        font-size: 18px;
+        font-weight: normal;
+        color:$blue;
+        line-height: 3;
+      }
+      p{
+        font-size: 14px;
+        color:#9b9b9b;
+        margin-left: 20px;
+        margin-bottom: 30px;
+        line-height: 1.8
+      }
+    }
+    .sign_up_zone_right{
+      flex:1;
+      background: $white;
+      .sign_up_zone_right_content{
+        padding: 50px;
+      }
+    }
+  }
+  .sign_up_box {
+    width: 440px;
+    height: 700px;
+    margin: 0 auto;
+  }
+
+  .box_header {
+    width: 100%;
+    height: 26px;
+    line-height: 30px;
+    text-align: left;
+    // padding-left: 10px;
+    font-size: 22px;
+
+    .box_header_link {
+      text-decoration: none;
+      color: $blue;
+    }
+    .box_header_link.router-link-active {
+      color: #4a4a4a;
+    }
+  }
+.captcha-btn{
+  width: 100%;
+  height: 40px;
+  color: #0095ff;
+  text-align: center;
+  line-height: 2.57;
+  font-size: 14px;
+  background: #f7f7f7;
+  text-decoration:underline;
+  border: 0px;
+}
+  .box_content {
+    margin-top: 30px;
+
+    .input_group {
+      position: relative;
+      width: 100%;
+      height: 50px;
+      border-bottom: 1px solid $vlGray;
+      transition: border-bottom 0.5s;
+      background: #f7f7f7;
+      margin-bottom: 24px;
+      border-radius: 4px;
+      border: 1px solid #f7f7f7;
+      display: flex;
+      .tel-before{
+        line-height: 50px;
+        width: 56px;
+        text-align: center;
+        position: relative;
+        font-size: 16px;
+        color:#777;
+      }
+      .tel-before:after{
+        position:absolute;
+        content: '';
+        width: 1px;
+        height:26px;
+        right:0px;
+        top:12px;
+        background: #d6d6d6;
+      }
+      .input_flag {
+        position: absolute;
+        left: 8px;
+        top: 13px;
+        display: inline-block;
+        height: 22px;
+        width: 30px;
+        font-size: 24px;
+        text-align: center;
+        transition: color 0.5s;
+      }
+
+      .input_flag.icon-iconfontyonghu {
+        font-size: 20px;
+      }
+
+      .input_flag.icon-shouji {
+        font-size: 26px;
+      }
+
+      >input {
+        left: 16px;
+        top: 4px;
+        position: absolute;
+        height: 40px;
+        width: 80%;
+        font-size: 16px;
+        line-height: 60px;
+        border: none;
+        background: none;
+      }
+
+      .tel-input{
+        left:68px;
+      }
+
+      .country_code_select {
+        position: absolute;
+        left: 16px;
+        top: 6px;
+        height: 40px;
+        width: 94%;
+
+        & /deep/ input {
+          border: none;
+          background: none;
+        }
+
+      }
+
+      .send_code {
+        position: absolute;
+        right: 0px;
+        top: 26px;
+        width: 120px;
+        height: 40px;
+        font-size: 14px;
+        line-height: 40px;
+        text-align: center;
+        color: $blue;
+        display: block;
+        cursor: pointer;
+        &.disable {
+          color: $lGray;
+        }
+      }
+      .input_error {
+        position: absolute;
+        left: 10px;
+        bottom:-20px;
+        line-height: 1;
+        color: $lOrange;
+        font-size: 14px;
+        text-align: left;
+      }
+
+      .captcha {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        width: 120px;
+        height: 40px;
+        background-color: $vlGray;
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+    }
+
+    .input_group.error {
+      border-bottom: 1px solid $lOrange;
+      .input_flag {
+        color: $lOrange;
+      }
+    }
+
+    .input_group.active{
+      border-bottom: 1px solid #f7f7f7;
+      .input_flag {
+        color: $blue;
+      }
+    }
+
+
+
+    .clause {
+      margin-top: 20px;
+      padding-left: 10px;
+      span {
+        color: $lGray;
+      }
+      a {
+        color: $blue;
+        text-decoration: none;
+      }
+    }
+
+  }
+
+  .box_bottom {
+    margin-top: 30px;
+    .button {
+      height: 50px;
+      background-color: $trandeOrange;
+      transition: background-color 0.5s;
+      margin: 0 auto;
+      color: $white;
+      font-size: 18px;
+      border-radius: 4px;
+      text-align: center;
+      line-height: 50px;
+      cursor: pointer;
+      &:hover {
+        background-color: $trandeOrangeh;
+      }
+    }
+  }
+}
+.regist-input-zone{
+  padding: 70px 0px;
+  padding-top: 60px;
+  width: 390px;
+  margin: 0 auto;
+}

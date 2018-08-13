@@ -1,0 +1,276 @@
+@import "../../config/Vars";
+.entrust{
+  margin: 0 auto;
+  margin-top: 10px;
+  height: 350px;
+  overflow: hidden;
+  background: #282a36;
+  border-radius: 3px;
+  /deep/ .el-tabs--border-card{
+    padding:0px 20px;
+    background: transparent;
+    .el-tabs__header{
+      background: transparent;
+    }
+  }
+  /deep/ .el-tabs--border-card{
+    border:0px;
+  }
+  /deep/ .el-tabs__nav{
+    line-height: 4.8;
+    background: transparent;
+    .is-active{
+      background-color: transparent;
+      color: #3d9cee !important;
+      border-color: transparent !important;
+    }
+  }
+  /deep/ .el-tabs__header{
+    border-bottom: 1px solid rgba(255,255,255,.1)
+  }
+  /deep/ .el-tabs__item{
+    color:#fff;
+    font-size: 15px;
+    padding: 0px 30px;
+    border-color: transparent !important;
+  }
+  /deep/ .el-tabs__content{
+    padding-top: 0px;
+  }
+}
+.order-tab{
+  border-top: 2px solid #90969B;
+  /deep/ .el-tabs__nav-scroll{
+    background: transparent;
+  }
+  /deep/  .is-active{
+    background: $white;
+    border-color:transparent;
+    border-color:$white !important;
+  }
+}
+.entrust_processing {
+  margin: 0px auto 0 auto;
+  padding-bottom: 35px;
+
+  .right {
+    height: 280px;
+    background-color: transparent;
+
+    .crypto_currency_select {
+      margin-right: 0px;
+      margin-top: 0px;
+    }
+    .crypto_top_choise{
+      width: 155px;
+      /deep/ input{
+        background: $blue;
+        color: $white;
+        border: 0px;
+      }
+      /deep/ .el-input__icon{
+        color: $white;
+      }
+    }
+    .pagination {
+      bottom: 20px;
+      left: 0;
+      width: 100%;
+      padding: 8px 0px;
+      text-align: center;
+      /deep/ .el-pager li.active {
+        border: 1px solid $blue;
+        background-color: $blue;
+        color: $white;
+        &:hover {
+          color: $white;
+        }
+      }
+      /deep/ .el-pager li {
+        height: 30px;
+        width: 30px;
+        border-radius: 100%;
+        margin-right: 20px;
+        border: 1px solid #656872;
+        line-height: 30px;
+        color: $refresh_zone;
+        background: transparent;
+      }
+      /deep/ button{
+        height: 30px;
+        width: 30px;
+        padding: 0px;
+        .el-icon{
+          font-size: 10px;
+        }
+      }
+      
+      /deep/ .btn-prev{
+        border-radius: 100%;
+        background: transparent;
+        border: 1px solid #656872;
+        margin-right: 20px;
+      }
+      /deep/ .btn-next{
+        border-radius: 100%;
+        background: transparent;
+        border: 1px solid #656872;
+      }
+      .el-pager li:hover {
+        color: $yellow;
+      }
+      .el-pagination button:hover{
+        color: $yellow;
+      }
+    }
+    .table {
+      width: 100%;
+      margin: 10px auto 0 auto;
+      table {
+        border-collapse:collapse;
+        border: none;
+        width: 100%;
+        color: #bcc0d1;
+        thead {
+          height: 40px;
+          background-color: transparent;
+          th {
+            height: 40px;
+            padding: 0;
+            color: #bcc0d1;
+            font-size: $exchange_font_min;
+            border-bottom:0px solid #efefef;
+            border-top:0px solid #efefef;
+          }
+          th:nth-child(1){
+            width: 100px;
+          }
+          th:nth-child(2){
+            width: 80px;
+          }
+          th:nth-child(3){
+            width: 120px;
+          }
+          th:nth-child(4){
+            width: 120px;
+          }
+          th:nth-child(5){
+            width: 120px;
+          }
+          th:nth-child(6){
+            width: 100px;
+          }
+          th:nth-child(7){
+            width: 100px;
+          }
+          th:nth-child(8){
+            width: 100px;
+          }
+        }
+
+        tbody {
+          &:hover {
+            color: #bcc0d1;
+            a {
+              color: $lBlue;
+            }
+          }
+          tr{
+            &:hover {
+              color: $blue;
+              a {
+                color: $blue;
+              }
+            }
+            td {
+              text-align: center;
+              font-size: 12px;
+              height: 30px;
+              a{
+                text-decoration: none;
+                color: $blue;
+                letter-spacing: 1px;
+                font-weight: bold;
+              }
+              &.manage {
+                color: $blue;
+                a {
+                  cursor: pointer;
+                  margin-left: 5px;
+                }
+              }
+            }
+            td:nth-child(1){
+              a {
+                text-decoration: underline;
+              }
+              width: 100px;
+            }
+            td:nth-child(2){
+              width: 80px;
+            }
+            td:nth-child(3){
+              width: 120px;
+            }
+            td:nth-child(4){
+              width: 120px;
+            }
+            td:nth-child(5){
+              width: 100px;
+            }
+            td:nth-child(6){
+              width: 100px;
+            }
+            td:nth-child(7){
+              width: 100px;
+            }
+            th:nth-child(8){
+              width: 100px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .clear {
+    clear: both;
+  }
+}
+.release_notice {
+  color: $red;
+  font-size: $exchange_font_min;
+  margin-top: 10px;
+  padding: 0 10px;
+}
+/deep/ .el-dialog__wrapper  {
+  .el-dialog {
+    min-width: 400px;
+  }
+  .el-dialog__body {
+    padding: 30px 20px 0px 20px;
+  }
+  .el-dialog__footer {
+    padding: 20px 20px 15px;
+  }
+  .input_group {
+    width: 100%;
+    .pwd_label {
+      display: inline-block;
+      width: 20%;
+      min-width: 60px;
+      line-height: 20px;
+    }
+    .pwd_input {
+      display: inline-block;
+      width: 50%;
+    }
+    .pwd_error {
+      display: inline-block;
+      width: 20%;
+      font-size: 12px;
+      color: $red;
+      line-height: 20px;
+      margin-left: 5px;
+    }
+  }
+}

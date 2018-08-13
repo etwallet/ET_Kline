@@ -1,0 +1,39 @@
+.logo_content {
+  position: relative;
+  width: 200px;
+  height: 57px;
+  padding-left: 45px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 57px;
+
+  overflow: hidden;
+}
+.logo {
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  display: block;
+  width: 40px;
+  height: 38px;
+  line-height: 35px;
+  margin-top: -19px;
+  background: url("../../assets/images/logo.png") no-repeat left;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bolder;
+  color: #ffffff;
+  display: inline-block;
+  text-align: right;
+  margin-left: 0px;
+}
+
+.en {
+  .logo_content {
+    width: 240px;
+  }
+  .logo {
+    width: 150px;
+  }
+}

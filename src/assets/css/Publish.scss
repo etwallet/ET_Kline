@@ -1,0 +1,364 @@
+@import "./config/Vars";
+
+.publish_notice {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: $dBg;
+  border-radius: 3px;
+  .publish_notice_content {
+    text-align: left;
+    padding: 16px 40px;
+    line-height: 20px;
+    font-size: 14px;
+    color: $gray;
+    margin: 0 auto;
+    margin-top: 65px;
+    color: #ae4e54;
+    .notice_content {
+      color: $table_th;
+      margin-top: 6px;
+      line-height: 1.7;
+    }
+    .el-icon-warn-fill {
+      display: inline-block;
+      background: url("../../assets/images/warn_fill.png") no-repeat;
+      background-size: 100% 100%;
+      width: 16px;
+      height: 16px;
+      margin-right: 6px;
+      vertical-align: middle;
+      position: relative;
+      top: -1px;
+    }
+    p {
+      text-indent: 20px;
+      line-height: 16px;
+    }
+  }
+}
+
+.publish {
+  width: $content_width;
+  background-color: $dBg;
+  margin: 0 auto;
+  padding-bottom: 35px;
+  border-radius: 3px;
+  margin-bottom: 90px;
+  .help-ico-zone {
+    position: absolute;
+    top: -1px;
+    left: 0px;
+    cursor: pointer;
+    height: 20px;
+    width: 40px;
+    padding-left: 84px;
+    z-index: 9;
+    .help-ico {
+      background: url("../../assets/images/help-min-ico.svg") no-repeat;
+      background-size: 100% 100%;
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+    }
+    .limit-zone-big {
+      padding-left: 120px;
+      position: absolute;
+      top: -2px;
+      left: 0px;
+      .limit-zone {
+        display: none;
+        color: #fff;
+        min-width: 340px;
+        line-height: 1.8;
+        background: #ae4e54;
+        padding: 0px 10px;
+        border-radius: 2px;
+        position: relative;
+      }
+      .limit-zone::before {
+        content: " ";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-color: transparent;
+        border-style: solid;
+        top: 10px;
+        left: -5px;
+        margin-top: -5px;
+        border-width: 5px 5px 5px 0;
+        border-right-color: #ae4e54;
+      }
+    }
+    &:hover {
+      .limit-zone {
+        display: block;
+      }
+    }
+  }
+  .point-zone {
+    line-height: 1.5;
+    color: $table_th;
+  }
+  .publish_form {
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    width: 1120px;
+    margin: 0 auto;
+
+    /deep/ .el-form-item {
+      width: 1080px;
+      padding: 20px;
+      padding-top: 0px;
+      position: relative;
+      border-bottom: 1px dotted rgba(255, 255, 255, 0.05);
+      padding-bottom: 30px;
+      input {
+        width: 400px;
+        height: 46px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        color: $table_td;
+      }
+      .el-form-item__label {
+        color: $table_th;
+        font-size: 14px;
+        padding-bottom: 8px;
+      }
+      .Tex {
+        line-height: 1;
+        color: #d0d0d0;
+        padding-top: 20px;
+        color: $table_th;
+      }
+      .el-textarea {
+        width: 600px;
+        textarea {
+          resize: none;
+          padding: 10px 15px;
+          background: rgba(255, 255, 255, 0.03);
+          border: 1px solid rgba(255, 255, 255, 0.05);
+          color: $table_td;
+        }
+      }
+
+      /deep/ .el-form-item__content button {
+        background-color: $blue;
+        border: none;
+        transition: background-color 0.5s;
+        line-height: 46px;
+        width: 200px;
+        padding: 0px;
+        &:hover {
+          background-color: $lYellow;
+        }
+
+        &.is-disabled {
+          background-color: $table_th;
+          &:hover {
+            background-color: $gray;
+          }
+        }
+      }
+
+      /deep/ .el-radio {
+        .is-checked {
+          .el-radio__inner {
+            border-color: $yellow;
+            background: $yellow;
+          }
+        }
+      }
+
+      /deep/ .el-checkbox {
+        margin-right: 16px;
+        .payment_method_icon1 {
+          display: inline-block;
+          vertical-align: bottom;
+          width: 33px;
+          height: 33px;
+          margin-left: 10px;
+
+          &.alipay {
+            background: url("../../assets/images/trade/alipay-blue.png")
+              no-repeat center;
+          }
+          &.wx {
+            background: url("../../assets/images/trade/wx-green.png") no-repeat
+              center;
+          }
+          &.bank {
+            background: url("../../assets/images/trade/bank-pink.png") no-repeat
+              center;
+          }
+        }
+
+        .payment_method_icon {
+          display: inline-block;
+          vertical-align: bottom;
+          width: 33px;
+          height: 33px;
+          margin-left: 10px;
+
+          &.ffc {
+            background: url("../../assets/images/trade/ffc_publish_icon.png")
+              no-repeat center;
+          }
+
+          &.alipay {
+            background: url("../../assets/images/trade/alipay-blue.png")
+              no-repeat center;
+          }
+
+          &.wx {
+            background: url("../../assets/images/trade/wx-green.png") no-repeat
+              center;
+          }
+
+          &.bank {
+            background: url("../../assets/images/trade/bank-pink.png") no-repeat
+              center;
+          }
+        }
+      }
+
+      .auto_take_notice {
+        display: inline-block;
+        color: #ae4e54;
+        margin-left: 30px;
+      }
+      .crypto_currency_zone {
+        width: 400px;
+        position: relative;
+        left: 0px;
+        top: -45px;
+        .crypto_currency_balance {
+          position: absolute;
+          right: 0px;
+          top: -32px;
+          height: 36px;
+          text-align: center;
+          color: $table_th;
+          span {
+            margin-left: 5px;
+            color: #ae4e54;
+          }
+        }
+      }
+      /deep/.el-form-item__content {
+        .el-form-item__error {
+          color: #ae4e54;
+          padding-top: 8px;
+        }
+      }
+      &.price {
+        .el-input {
+          width: 400px;
+          display: inline-block;
+          input {
+            width: 400px;
+          }
+          .el-form-item__error {
+            color: #ae4e54;
+          }
+          .price_currency {
+            position: absolute;
+            right: 0;
+            top: 0;
+            line-height: 46px;
+            width: 40px;
+            padding-right: 12px;
+            text-align: right;
+            color: $table_th;
+          }
+        }
+      }
+
+      &.limit {
+        /deep/.el-form-item__content {
+          .el-form-item__error {
+            color: #ae4e54;
+            padding-top: 8px;
+          }
+        }
+        .el-input {
+          width: 275px;
+          display: inline-block;
+          input {
+            width: 275px;
+          }
+          .limit_currency {
+            position: absolute;
+            right: 0;
+            top: 0;
+            line-height: 46px;
+            width: 40px;
+            text-align: center;
+            color: $table_th;
+          }
+        }
+        .limit_flag {
+          width: 40px;
+          height: 40px;
+          display: inline-block;
+          font-size: 16px;
+          line-height: 40px;
+          text-align: center;
+          color: $table_th;
+        }
+      }
+      &.agent {
+        display: none;
+      }
+
+      &.credit {
+        display: none;
+        width: 300px;
+
+        .start_percent {
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+
+        .end_percent {
+          position: absolute;
+          right: -60px;
+          top: 0;
+        }
+        /deep/ .el-slider {
+          margin-left: 40px;
+        }
+        /deep/ .el-slider__bar {
+          background-color: $yellow;
+        }
+
+        /deep/ .el-slider__button {
+          background-color: $white;
+          border: 1px solid $yellow;
+        }
+      }
+
+      .publish_btn_notice {
+        display: inline-block;
+        vertical-align: top;
+        color: #ae4e54;
+        font-size: 14px;
+      }
+
+      .message_notice {
+        color: #ae4e54;
+      }
+    }
+
+    .credit_label {
+      display: none;
+      text-indent: 20px;
+      font-size: 14px;
+      color: $dGray;
+      /deep/ span {
+        font-weight: bold;
+        color: #ae4e54;
+      }
+    }
+  }
+}

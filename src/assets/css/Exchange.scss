@@ -1,0 +1,82 @@
+@import "./config/Vars";
+
+.content {
+  width: $content_width;
+  margin: 0 auto;
+  padding-bottom: 56px;
+  margin-top: 45px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  overflow: hidden;
+  .kline {
+    width: 1200px;
+    height: 580px;
+    box-sizing: border-box;
+    user-select: none;
+    margin: 0 auto;
+  }
+  .kline-top-zone {
+    background-color: #fff;
+    padding-bottom: 20px;
+  }
+  .trade_box_zone {
+    width: 100%;
+    background: #eef0f1;
+    padding-bottom: 30px;
+  }
+  .trade_box_content_zone {
+    width: 1200px;
+    display: flex;
+    margin: 0 auto;
+    padding-top: 16px;
+  }
+  .trade_choise {
+    width: 220px;
+    border-top: 2px solid #90969b;
+    background: $white;
+    min-height: 400px;
+    .trade_choise_title {
+      background: #2e3140;
+      color: $white;
+      text-align: left;
+      padding: 0px 15px;
+      line-height: 3.2;
+    }
+    .activeChoise {
+      background: #f5f5f5;
+    }
+    .trade_choise_name {
+      line-height: 3.4;
+      padding: 0px 10px;
+      cursor: pointer;
+      span {
+        float: right;
+      }
+      .red {
+        color: $trandeOrange;
+      }
+      .green {
+        color: $tradeGreen;
+      }
+      i {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+        position: relative;
+      }
+      .ico-osc {
+        background: url("../../assets/images/exchange/osc_ico.png") no-repeat
+          center;
+        background-size: 100%;
+        top: 5px;
+      }
+      .ico-dgc {
+        background: url("../../assets/images/exchange/dgc_ico.png") no-repeat
+          center;
+        background-size: 100%;
+        top: 5px;
+      }
+    }
+  }
+}

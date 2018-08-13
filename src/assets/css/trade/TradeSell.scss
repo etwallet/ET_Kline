@@ -1,0 +1,371 @@
+@import '../config/Vars';
+.trade_sell {
+  position: relative;
+  padding-bottom: 100px;
+}
+.trade_sell_header {
+  width: 100%;
+  height: 55px;
+  background-color: $tradeGreen;
+  color: $white;
+  font-size: 20px;
+  text-align: center;
+  line-height: 55px;
+}
+.trade_sell_title {
+  width: 100%;
+  height: 50px;
+  background-color: $vlGray;
+  color: $dGray;
+  font-size: 16px;
+
+  .trade_sell_title_item {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+
+    &.user {
+      width: 100px;
+    }
+
+    &.limit {
+      width: 220px;
+    }
+
+    &.price {
+      width: 130px;
+    }
+  }
+}
+.trade_list {
+  .trade_sell_item {
+
+
+    .trade_sell_col {
+      height: 75px;
+      color: $black;
+      &.user {
+        width: 100px;
+        height: 75px;
+        line-height: 75px;
+        text-align: center;
+        font-size: 16px;
+        color: $black;
+        overflow: hidden;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+
+        &:before{
+          display: inline-block;
+          content: '';
+          font-size: 12px;
+          width: 6px;
+          height: 6px;
+          border-radius: 6px;
+          background-color: #bfbfbf;
+        }
+
+        &.online:before {
+          display: inline-block;
+          content: '';
+          font-size: 12px;
+          width: 6px;
+          height: 6px;
+          border-radius: 6px;
+          background-color: #8cff26;
+        }
+      }
+      &.limit {
+        width: 220px;
+        height: 75px;
+        line-height: 75px;
+        text-align: center;
+        font-size: 14px;
+        color: $gray;
+        overflow: hidden;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+      }
+      &.price {
+        width: 130px;
+        height: 75px;
+        line-height: 75px;
+        text-align: center;
+        font-size: 14px;
+        color: $black;
+        overflow: hidden;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+      }
+      &.button_group {
+        width: 100px;
+        height: 75px;
+        text-align: center;
+        .sell {
+          width: 86px;
+          height: 34px;
+          line-height: 34px;
+          font-size: 16px;
+          color: $white;
+          background-color: $yellow;
+          border-radius: 4px;
+          margin: 20px auto;
+          cursor: pointer;
+          transition: background-color 0.5s;
+
+          &:hover {
+            background-color: $lYellow;
+          }
+        }
+
+        .fold {
+          width: 86px;
+          height: 34px;
+          line-height: 34px;
+          font-size: 16px;
+          color: $white;
+          background-color: $gray;
+          border-radius: 4px;
+          margin: 20px auto;
+          cursor: pointer;
+          transition: background-color 0.5s;
+
+          &:hover {
+            background-color: $lGray;
+          }
+        }
+      }
+    }
+    &:nth-child(even){
+      background-color: $vlGray;
+    }
+    .trade_box {
+      position: relative;
+      box-sizing: border-box;
+      clear: both;
+      height: 0;
+      transition: height 0.5s,border 0.5s;
+      overflow: hidden;
+      //background-color: $white;
+
+      &.show {
+        height: 619px;
+      }
+
+      .trade_info {
+        position: relative;
+        width: 100%;
+        height: 250px;
+
+        .trade_title {
+          position: absolute;
+          left: 20px;
+          top: 140px;
+          font-size: 16px;
+
+          span {
+            vertical-align: middle;
+            padding: 2px 4px;
+            font-size: 12px;
+            color: $white;
+            border-radius: 4px;
+            background-color: #bfbfbf;
+            margin-left: 10px;
+            &.online {
+              background-color: #009947;
+            }
+          }
+        }
+
+        .trade_price {
+          position: absolute;
+          height: 60px;
+          left: 20px;
+          top: 40px;
+          .price {
+            display: inline-block;
+            font-size: 60px;
+          }
+          .price_notice {
+            display: inline-block;
+            font-size: 16px;
+            margin-left: 10px;
+          }
+        }
+
+        .trade_user_avatar {
+          position: absolute;
+          top: 140px;
+          left: 200px;
+          width: 75px;
+          height: 75px;
+          line-height: 75px;
+          text-align: center;
+          font-size: 30px;
+          color: $white;
+          border-radius: 75px;
+          background-color: #74deff;
+          overflow: hidden;
+          user-select: none;
+        }
+
+        .praise {
+          position: absolute;
+          top: 135px;
+          left: 340px;
+          .praise_icon {
+            display: inline-block;
+            width: 33px;
+            height: 33px;
+            background: url("../../assets/images/trade/praise.png") no-repeat center;
+          }
+          .praise_content {
+            display: inline-block;
+            height: 33px;
+            vertical-align: top;
+            line-height: 33px;
+            font-size: 16px;
+            color: $lGray;
+            margin-left: 10px;
+          }
+        }
+
+        .credit {
+          position: absolute;
+          top: 185px;
+          left: 340px;
+          .credit_icon {
+            display: inline-block;
+            width: 33px;
+            height: 33px;
+            background: url("../../assets/images/trade/credit.png") no-repeat center;
+          }
+          .credit_content {
+            display: inline-block;
+            height: 33px;
+            vertical-align: top;
+            line-height: 33px;
+            font-size: 16px;
+            color: $lGray;
+            margin-left: 10px;
+          }
+        }
+      }
+
+      .trade_payment_method {
+        width: 100%;
+        height: 60px;
+        margin-left: 20px;
+        label {
+          display: inline-block;
+          height: 33px;
+          line-height: 33px;
+          vertical-align: top;
+          font-size: 16px;
+        }
+
+        .trade_payment_method_items {
+          display: inline-block;
+          vertical-align: top;
+          margin-left: 50px;
+          .payment {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 40px;
+            height: 33px;
+            width: 33px;
+            &.alipay {
+              background: url("../../assets/images/trade/alipay.png") no-repeat center;
+            }
+            &.wx {
+              background: url("../../assets/images/trade/wx.png") no-repeat center;
+            }
+            &.bank {
+              background: url("../../assets/images/trade/bank.png") no-repeat center;
+            }
+          }
+        }
+      }
+
+      .trade_input_group {
+        position: relative;
+        width: 100%;
+        height: 90px;
+        margin-left: 20px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        label {
+          font-size: 14px;
+          span {
+            color: $red;
+          }
+        }
+        input {
+          width: 500px;
+          height: 60px;
+          padding: 0;
+          margin: 5px 0;
+          font-size: 20px;
+          text-indent: 16px;
+        }
+
+
+        .currency_flag {
+          position: absolute;
+          top: 38px;
+          right: 60px;
+          font-size: 20px;
+        }
+      }
+
+      .trade_submit {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 55px;
+        background-color: $tradeRed;
+        font-size: 22px;
+        color: $white;
+        text-align: center;
+        line-height: 55px;
+        cursor: pointer;
+        transition: background-color 0.5s;
+
+        &.disable {
+          background-color: $lGray;
+          cursor: auto;
+
+          &:hover {
+            background-color: $lGray;
+          }
+        }
+
+        &:hover {
+          background-color: $lTradeRed;
+        }
+      }
+    }
+  }
+}
+.pagination {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  /deep/ .el-pager li.active {
+    border-color: #d1dbe5;
+    background-color: $yellow;
+
+    &:hover {
+      color: $white;
+    }
+  }
+  .el-pager li:hover {
+    color: $yellow;
+  }
+  .el-pagination button:hover{
+    color: $yellow;
+  }
+}

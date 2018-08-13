@@ -1,0 +1,186 @@
+@import "../config/Vars";
+.order_zone{
+  width: 100%;
+  margin: 0 auto;
+  .order_tab_zone{
+    position: relative;
+    height: 48px;
+    border-radius: 3px 3px 0 0;
+    margin: 0 auto;
+    padding: 0 10px;
+    box-shadow: 0px 3px 3px #11141F;
+    overflow: hidden;
+    background-color: #21232e;
+    ul{
+      float: left;
+      font-size: 16px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li{
+        float: left;
+        padding: 15px 20px;
+        padding-right: 0px;
+        cursor: pointer;
+        color: $white;
+        span{
+          padding-right: 10px;
+        }
+      }
+      .cur-min{
+        font-size: 12px;
+        line-height: 1.5;
+        padding-top:15px; 
+        padding-left: 10px;
+        color: $blue;
+      }
+    }
+  }
+}
+.user_reset_payment_pwd_email {
+  width: $content_width;
+  margin: 65px auto 0 auto;
+  padding-bottom: 135px;
+  .big-blue{
+    font-size: 20px;
+    color: $blue;
+    margin-bottom: 10px;
+  }
+  .wallet_title{
+    font-size: 18px;
+    color: #C7CCE6;
+    line-height: 2.8;
+    background: $dBg;
+    padding:0px 30px;
+    margin-bottom: 20px;
+  }
+  .left {
+    width: 220px;
+    float: left;
+  }
+  .right {
+    width: 960px;
+    min-height: 292px;
+    float: right;
+    border-radius: 3px;
+    background-color: #21232e;
+
+
+    .reset_payment_pwd_email_content {
+      width: 480px;
+      margin: 20px auto 0 auto;
+      line-height: 40px;
+      padding-top: 10px;
+      .input_group {
+        position: relative;
+        width: 100%;
+        transition: border-bottom 0.5s;
+
+
+        .input_flag {
+          position: absolute;
+          left: 4px;
+          top: 40%;
+          display: inline-block;
+          height: 22px;
+          width: 30px;
+          font-size: 24px;
+          text-align: center;
+          transition: color 0.5s;
+        }
+
+        >input {
+          left: 50px;
+          top: 26px;
+          height: 46px;
+          width: 470px;
+          font-size: 14px;
+          line-height: 60px;
+          border: none;
+          background: none;
+          border: 1px solid rgba(255,255,255,0.1);
+          background:  rgba(255, 255, 255, 0.03);
+          border-radius: 3px;
+          margin-top: 16px;
+          color:$table_td;
+          padding-left: 10px;
+        }
+
+        .send_code {
+          position: absolute;
+          right: 0px;
+          top: 25px;
+          width: 120px;
+          /* height: 40px; */
+          font-size: 14px;
+          line-height: 32px;
+          text-align: center;
+          color: #3d9cee;
+          display: block;
+          cursor: pointer;
+          border-left: 1px solid rgba(255,255,255,0.1);
+          &.disable {
+            color: $lGray;
+          }
+        }
+
+        .input_error {
+          position: absolute;
+          right: -200px;
+          top: 26px;
+          width: 180px;
+          height: 40px;
+          line-height: 40px;
+          color: $red;
+          font-size: 14px;
+          text-align: left;
+        }
+      }
+
+      .input_group.error {
+        border-bottom: 1px solid $red;
+        .input_flag {
+          color: $red;
+        }
+      }
+
+      .input_group.active{
+        .input_flag {
+          color: $blue;
+        }
+      }
+
+      .switch_type {
+        font-size: 14px;
+        text-align: right;
+        a {
+          color: $blue;
+          text-decoration: none;
+        }
+      }
+
+      .box_bottom {
+        margin-top: 7px;
+        margin-bottom: 55px;
+        .button {
+          width: 100%;
+          background-color: $blue;
+          transition: background-color 0.5s;
+          color: $white;
+          font-size: 16px;
+          border-radius: 3px;
+          text-align: center;
+          line-height: 48px;
+          cursor: pointer;
+          &:hover {
+            background-color: $lYellow;
+          }
+        }
+      }
+    }
+  }
+
+  .clear {
+    clear: both;
+  }
+}

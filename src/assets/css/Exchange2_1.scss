@@ -1,0 +1,574 @@
+@import "./config/Vars";
+.content-exchange {
+  min-width: 1500px;
+  padding: 10px;
+  padding-bottom: 10px;
+  margin-top: 0px;
+  overflow: hidden;
+  background: $exchange_bg;
+  input:-webkit-autofill {
+    box-shadow: 0 0 0px 1000px white inset !important;
+  }
+  input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.2);
+    -webkit-transition: color.5s;
+  }
+  .exchange-right {
+    background: transparent;
+    border-radius: 3px;
+    .market {
+      background: $mainColor;
+      border-radius: 3px;
+      padding: 18px 15px;
+      color: $exchange_title;
+      height: 495px;
+      p {
+        margin: 0 auto;
+
+        font-size: $exchange_font_max;
+        font-weight: 600;
+      }
+      .input-with-select {
+        margin-top: 18px;
+        /deep/ .el-input__inner {
+          background: transparent;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-right: 0px;
+          color: $exchange_title;
+          font-size: 12px;
+        }
+        /deep/ .el-input-group__append {
+          background: transparent;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-left: 0px;
+          padding: 0px 5px;
+        }
+        .search_btn {
+          display: block;
+          background: url("../../assets/images/search.svg") no-repeat center;
+          background-size: 100%;
+          width: 20px;
+          height: 20px;
+        }
+      }
+      .trade_input {
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        height: 30px !important;
+        padding-left: 10px;
+        border-radius: 3px;
+        background: transparent;
+        display: block;
+        width: 100%;
+        color: $exchange_title;
+      }
+      .search_btn {
+        display: block;
+        background: url("../../assets/images/search.svg") no-repeat center;
+        background-size: 100%;
+        width: 20px;
+        height: 20px;
+      }
+
+      .market-choise-zone {
+        // padding-top: $exchange_font_max;
+        margin-top: $exchange_font_max;
+
+        height: 415px;
+        // overflow: hidden;
+        overflow-y: auto;
+
+        .trade_choise_name {
+          display: flex;
+          padding: 5px 10px 15px 10px;
+          cursor: pointer;
+          border-radius: 3px;
+          i {
+            display: inline-block;
+            width: 42px;
+            height: 42px;
+            min-width: 26px;
+            min-height: 26px;
+            margin-right: 18px;
+            position: relative;
+          }
+          .ico-fft {
+            background: url("../../assets/images/exchange/fft.png") no-repeat
+              center;
+            background-size: 100%;
+          }
+          .ico-osc {
+            background: url("../../assets/images/exchange/osc_ico.png")
+              no-repeat center;
+            background-size: 100%;
+          }
+          .ico-dgc {
+            background: url("../../assets/images/exchange/dgc_ico.png")
+              no-repeat center;
+            background-size: 100%;
+          }
+          .ico-xdag {
+            background: url("../../assets/images/exchange/xdag_ico.png")
+              no-repeat center;
+            background-size: 100%;
+          }
+          .ico-cbc {
+            background: url("../../assets/images/exchange/cbc_ico.png")
+              no-repeat center;
+            background-size: 100%;
+          }
+          .ico-eth {
+            background: url("../../assets/images/exchange/eth_ico.svg")
+              no-repeat center;
+            background-size: 100%;
+          }
+        }
+        .market-choise-ft {
+          width: 100%;
+          flex: 1;
+          font-size: 12px;
+          line-height: 2;
+        }
+        .market-choise-lv {
+          flex: 1;
+          text-align: right;
+          font-size: $exchange_font_min;
+          line-height: 4;
+          width: 50px;
+          .green {
+            color: $exchange_green;
+          }
+          .red {
+            color: $exchange_red;
+          }
+        }
+      }
+      .market-choise-zone::-webkit-scrollbar {
+        /*滚动条整体样式*/
+        width: 8px;
+        /*高宽分别对应横竖滚动条的尺寸*/
+        height: 1px;
+      }
+
+      .market-choise-zone::-webkit-scrollbar-thumb {
+        /*滚动条里面小方块*/
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 5px rgba(255, 255, 255, 0);
+        background: #323443;
+      }
+
+      .market-choise-zone::-webkit-scrollbar-track {
+        /*滚动条里面轨道*/
+        -webkit-box-shadow: inset 0 0 5px rgba(255, 255, 255, 0);
+        border-radius: 10px;
+        background: transparent;
+      }
+    }
+    .news_zone {
+      background: $mainColor;
+      border-radius: 3px;
+      padding: 18px 15px;
+      color: $rwhite;
+      margin-top: 10px;
+      height: 795px;
+      cursor: pointer;
+      p {
+        margin: 0 auto;
+        font-size: $exchange_font_max;
+        padding-bottom: 18px;
+        font-weight: 600;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .news-list {
+        display: block;
+        color: $exchange_title;
+        font-size: 12px;
+        text-decoration: none;
+        padding-top: 18px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        .time {
+          font-size: 12px;
+          text-align: right;
+          color: $exchange_dft;
+          margin: 0px;
+          padding-bottom: 18px;
+          padding-top: 15px;
+        }
+      }
+    }
+  }
+
+  .trade_choise_name_active {
+    background: $exchange_bg;
+  }
+  .kline-top-zone {
+    background: $mainColor;
+    border-radius: 3px;
+    padding: 18px 15px;
+    height: 495px;
+    .kline-top-data {
+      .title {
+        font-size: $exchange_font_max;
+        position: relative;
+        top: 1px;
+        color: $exchange_title;
+        font-weight: 600;
+      }
+      .data-ft {
+        font-size: $exchange_font_max;
+        color: $exchange_title;
+        margin-left: 30px;
+        .green {
+          color: $exchange_green;
+        }
+        .red {
+          color: $exchange_red;
+        }
+      }
+    }
+    .kline-border {
+      height: 453px;
+      margin-top: $exchange_font_max;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 12px;
+      overflow: hidden;
+    }
+  }
+  .trade_box_content_zone {
+    display: flex;
+    margin-top: 10px;
+  }
+}
+.content {
+  width: $content_width;
+  margin: 0 auto;
+  padding-bottom: 56px;
+  margin-top: 65px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  overflow: hidden;
+  .kline {
+    width: 1200px;
+    height: 580px;
+    box-sizing: border-box;
+    user-select: none;
+    margin: 0 auto;
+  }
+  .kline-top-zone {
+    background-color: $dBg;
+    padding-bottom: 20px;
+  }
+  .trade_box_zone {
+    width: 100%;
+    background: #eef0f1;
+    padding-bottom: 30px;
+  }
+  .trade_box_content_zone {
+    width: 1200px;
+    display: flex;
+    margin: 0 auto;
+    padding-top: 16px;
+  }
+  .trade_choise {
+    width: 220px;
+    border-top: 2px solid #90969b;
+    background: $white;
+    min-height: 400px;
+    .trade_choise_title {
+      background: #2e3140;
+      color: $white;
+      text-align: left;
+      padding: 0px 15px;
+      line-height: 3.2;
+    }
+    .activeChoise {
+      background: #f5f5f5;
+    }
+    .trade_choise_name {
+      line-height: 3.4;
+      padding: 0px 10px;
+      cursor: pointer;
+      span {
+        float: right;
+      }
+      .red {
+        color: #e64c65;
+      }
+      .green {
+        color: #29bc86;
+      }
+      i {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+        position: relative;
+      }
+      .ico-osc {
+        background: url("../../assets/images/exchange/osc_ico.png") no-repeat
+          center;
+        background-size: 100%;
+        top: 5px;
+      }
+      .ico-dgc {
+        background: url("../../assets/images/exchange/dgc_ico.png") no-repeat
+          center;
+        background-size: 100%;
+        top: 5px;
+      }
+      .ico-xdag {
+        background: url("../../assets/images/exchange/xdag_ico.png") no-repeat
+          center;
+        background-size: 100%;
+        top: 5px;
+      }
+      .ico-cbc {
+        background: url("../../assets/images/exchange/cbc_ico.png") no-repeat
+          center;
+        background-size: 100%;
+        top: 5px;
+      }
+      .ico-eth {
+        background: url("../../assets/images/exchange/eth_ico.svg") no-repeat
+          center;
+        background-size: 100%;
+        top: 5px;
+      }
+    }
+  }
+}
+@import "./config/Vars";
+.bottom {
+  width: 100%;
+  min-width: $content_width;
+  background: $exchange_bg;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  .site_map {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+
+    .site_map_left {
+      width: 50%;
+      text-align: center;
+      font-size: $exchange_font_max;
+      color: #9397a8;
+
+      a {
+        display: inline-block;
+        margin: 0px 10px;
+        color: #9397a8;
+
+        text-decoration: none;
+        line-height: 3.8;
+      }
+      a:hover {
+        color: $white;
+      }
+      .language {
+        width: 100px;
+        font-size: $exchange_font_max;
+        /deep/ .el-input__icon {
+          color: #9397a8;
+        }
+        & /deep/ input {
+          border: none;
+          background: none;
+          color: #9397a8;
+        }
+      }
+    }
+    .content {
+      width: 800px;
+      margin: 0 auto;
+      color: $white;
+      line-height: 70px;
+      font-size: $exchange_font_max;
+      text-align: center;
+      a {
+        text-decoration: none;
+        color: $white;
+      }
+    }
+    .language {
+      & /deep/ input {
+        border: none;
+        background: none;
+        color: $white;
+      }
+    }
+  }
+  .cp {
+    width: 100%;
+    height: 65px;
+    background-color: $bgBlack;
+    .content {
+      width: $content_width;
+      margin: 0 auto;
+      text-align: center;
+      font-size: $exchange_font_max;
+      line-height: 65px;
+      color: $gray;
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+
+  .contact {
+    position: fixed;
+    right: 10px;
+    bottom: 135px;
+    width: 41px;
+    height: 150px;
+    .item {
+      position: relative;
+      height: 41px;
+      width: 41px;
+      margin-bottom: 10px;
+      cursor: pointer;
+
+      a {
+        color: $white;
+        text-decoration: none;
+        cursor: auto;
+      }
+
+      &.qq {
+        background: url("../../assets/images/qq.png") no-repeat center;
+        background-color: $float_right;
+        &:hover {
+          background-color: $blue;
+          .detail {
+            top: 0;
+            height: 41px;
+            z-index: 1;
+          }
+        }
+        .detail {
+          position: absolute;
+          top: 41px;
+          left: 0;
+          width: 41px;
+          height: 0px;
+          line-height: 20px;
+          text-align: center;
+          background-color: $float_right;
+          overflow: hidden;
+          cursor: auto;
+          transition: top 0.3s, height 0.3s;
+          a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            font-size: $exchange_font_max;
+          }
+        }
+      }
+      &.wx {
+        background: url("../../assets/images/wx.png") no-repeat center;
+        background-color: $float_right;
+        &:hover {
+          background-color: $blue;
+          .detail {
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+        .detail {
+          position: absolute;
+          right: 45px;
+          bottom: 0;
+          width: 134px;
+          height: 136px;
+          visibility: hidden;
+          opacity: 0;
+          background-color: $lYellow;
+          overflow: hidden;
+          transition: opacity 0.3s;
+          border: 1px solid $yellow;
+          cursor: auto;
+        }
+      }
+      &.app {
+        color: $white;
+        background-color: $float_right;
+        text-align: center;
+        font-size: $exchange_font_max;
+        line-height: 1.2;
+        span {
+          display: inline-block;
+          padding-top: 4px;
+        }
+        &:hover {
+          background-color: $blue;
+          .detail {
+            width: 200px;
+          }
+        }
+
+        .detail {
+          position: absolute;
+          right: 41px;
+          top: 0;
+          width: 0px;
+          height: 41px;
+          line-height: 41px;
+          background-color: $blue;
+          text-indent: 6px;
+          overflow: hidden;
+          transition: width 0.3s;
+          cursor: auto;
+        }
+      }
+      &.email {
+        background: url("../../assets/images/email.png") no-repeat center;
+        background-color: $float_right;
+        &:hover {
+          background-color: $blue;
+          .detail {
+            width: 200px;
+          }
+        }
+
+        .detail {
+          position: absolute;
+          right: 41px;
+          top: 0;
+          width: 0px;
+          height: 41px;
+          line-height: 41px;
+          background-color: $blue;
+          text-indent: 6px;
+          overflow: hidden;
+          transition: width 0.3s;
+          cursor: auto;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1600px) {
+  .content1 {
+    .market-choise-zone {
+      padding-top: $exchange_font_max;
+      .trade_choise_name {
+        display: flex;
+        padding: 15px 10px;
+        cursor: pointer;
+        border-radius: 3px;
+        i {
+          display: inline-block;
+          width: 32px;
+          height: 32px;
+          margin-right: 18px;
+          position: relative;
+          margin-top: 6px;
+        }
+      }
+    }
+  }
+}

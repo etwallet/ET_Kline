@@ -1,0 +1,27 @@
+@import "../config/Vars";
+.user_modify_mobile {
+  width: $content_width;
+  margin: 10px auto 0 auto;
+  padding-bottom: 135px;
+  .left {
+    width: 181px;
+    float: left;
+  }
+  .right {
+    position: relative;
+    width: 960px;
+    float: right;
+    background-color: $white;
+
+    .modify_mobile_content {
+      width: 900px;
+      height: 540px;
+      margin: 100px auto 0 auto;
+      line-height: 40px;
+      padding-top: 10px;
+    }
+  }
+  .clear {
+    clear: both;
+  }
+}

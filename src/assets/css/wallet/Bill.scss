@@ -1,0 +1,216 @@
+@import "../config/Vars";
+.wallet_bill {
+  width: $content_width;
+  margin: 20px auto 0 auto;
+  padding-bottom: 135px;
+  padding-top: 45px;
+  .wallet_title {
+    font-size: 18px;
+    color: #c7cce6;
+    line-height: 2.8;
+    background: $dBg;
+    padding: 0px 30px;
+    margin-bottom: 20px;
+  }
+  .left {
+    width: 220px;
+    float: left;
+  }
+  .right {
+    width: 960px;
+    min-height: 292px;
+    float: right;
+    border-radius: 3px;
+    position: relative;
+    background-color: $dBg;
+    .crypto_top_choise {
+      padding-top: 10px;
+      width: 155px;
+      padding-left: 10px;
+      /deep/ input {
+        background: $blue;
+        color: $white;
+        border: 0px;
+      }
+      // .el-scrollbar__bar {
+      //   position: absolute;
+      //   right: 2px;
+      //   bottom: 2px;
+      //   z-index: 1;
+      //   border-radius: 4px;
+      //   // opacity: 0;
+      //   transition: opacity 120ms ease-out;
+      // }
+
+      // /deep/ .el-select-dropdown {
+      //   position: absolute;
+      //   z-index: 1001;
+      //   border: 1px solid #d1dbe5;
+      //   border-radius: 2px;
+      //   background-color: #fff;
+      //   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
+      //   box-sizing: border-box;
+      //   margin: 5px 0;
+      //   .el-scrollbar {
+      //     overflow: hidden;
+      //     position: relative;
+      //     .el-scrollbar__bar.is-vertical {
+      //       width: 6px;
+      //       top: 2px;
+      //     }
+
+      //     /deep/ .el-scrollbar__bar {
+      //       position: absolute;
+      //       right: 2px;
+      //       bottom: 2px;
+      //       z-index: 1;
+      //       border-radius: 4px;
+      //       // opacity: 0;
+      //       transition: opacity 120ms ease-out;
+      //     }
+      //   }
+      // }
+    }
+    .pagination {
+      bottom: 20px;
+      left: 0;
+      width: 100%;
+      padding: 20px 0px;
+      text-align: center;
+      /deep/ .el-pager li.active {
+        border: 1px solid $blue;
+        background-color: $blue;
+        color: $white;
+        &:hover {
+          color: $white;
+        }
+      }
+      /deep/ .el-pager li {
+        height: 30px;
+        width: 30px;
+        border-radius: 100%;
+        margin-right: 20px;
+        border: 1px solid $refresh_zone;
+        line-height: 30px;
+        color: $refresh_zone;
+        background: transparent;
+      }
+      /deep/ button {
+        height: 30px;
+        width: 30px;
+        padding: 0px;
+        .el-icon {
+          font-size: 10px;
+        }
+      }
+
+      /deep/ .btn-prev {
+        border-radius: 100%;
+        background: $refresh_zone;
+        border: 0px;
+        margin-right: 20px;
+      }
+      /deep/ .btn-next {
+        border-radius: 100%;
+        background: $refresh_zone;
+        border: 0px;
+      }
+      .el-pager li:hover {
+        color: $yellow;
+      }
+      .el-pagination button:hover {
+        color: $yellow;
+      }
+    }
+    .table {
+      width: 900px;
+      margin: 10px auto 0 auto;
+      padding: 20px;
+      border-radius: 3px;
+      padding-bottom: 0px;
+      margin-bottom: 40px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      table {
+        border-collapse: collapse;
+        border: none;
+        thead {
+          height: 40px;
+          background-color: transparent;
+          th {
+            height: 40px;
+            padding: 0;
+            color: #61718a;
+            font-size: 12px;
+            font-weight: normal;
+          }
+          th:nth-child(1) {
+            width: 200px;
+            text-align: left;
+          }
+          th:nth-child(2) {
+            width: 200px;
+            text-align: right;
+          }
+          th:nth-child(3) {
+            width: 200px;
+            text-align: right;
+          }
+          th:nth-child(4) {
+            width: 200px;
+            text-align: right;
+          }
+          th:nth-child(5) {
+            width: 160px;
+            text-align: right;
+          }
+        }
+
+        tbody {
+          tr {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            td {
+              text-align: center;
+              font-size: 14px;
+              height: 44px;
+              color: #c7cce6;
+              a {
+                text-decoration: none;
+                color: $blue;
+              }
+              &.manage {
+                color: $blue;
+                a {
+                  cursor: pointer;
+                  margin-left: 5px;
+                }
+              }
+            }
+            td:nth-child(1) {
+              width: 200px;
+              text-align: left;
+            }
+            td:nth-child(2) {
+              width: 200px;
+              text-align: right;
+            }
+            td:nth-child(3) {
+              width: 200px;
+              text-align: right;
+            }
+            td:nth-child(4) {
+              width: 200px;
+              text-align: right;
+            }
+            td:nth-child(5) {
+              width: 160px;
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
+  }
+  .clear {
+    clear: both;
+  }
+}

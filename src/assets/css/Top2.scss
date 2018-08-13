@@ -1,0 +1,54 @@
+@import "./config/Vars";
+.top {
+  width: 100%;
+  margin: 0 auto;
+  height: 57px;
+  background-color: #3cb3ff;
+
+  min-width: 1200px;
+}
+.top-zone {
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 999;
+  background-color: $mainColor;
+}
+.today-trend-zone {
+  width: 100%;
+  background: $dmainColor;
+}
+.today-trend {
+  width: 100%;
+  background: $dmainColor;
+  max-width: $content_width;
+  margin: 0 auto;
+  span {
+    line-height: 2;
+    margin-right: 10px;
+    color: $white;
+    margin-left: 35px;
+  }
+  .green {
+    color: $trandtopGreen;
+  }
+  .orange {
+    color: $trandeOrange;
+  }
+  .up {
+    background: url("../../assets/images/up.png") no-repeat;
+    width: 8px;
+    height: 10px;
+    display: inline-block;
+    margin-left: 5px;
+    position: relative;
+  }
+  .down {
+    background: url("../../assets/images/down.png") no-repeat;
+    width: 8px;
+    height: 10px;
+    display: inline-block;
+    margin-left: 5px;
+    position: relative;
+  }
+}

@@ -1,0 +1,141 @@
+@import "../config/Vars";
+.navbar {
+  width: 500px;
+  height: 45px;
+  .nav_item {
+    height: 45px;
+    line-height: 3;
+    text-align: center;
+    font-size: 14px;
+  }
+  // /deep/.el-col-5{
+  //   width: 18%
+  // }
+  /deep/.el-col-4{
+    width: 14%
+  }
+  .item_link {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 15px;
+    cursor: pointer;
+    position: relative;
+    &:hover {
+      color: $lYellow;
+    }
+
+    &.router-link-exact-active {
+      color: $lYellow;
+    }
+  }
+  .hot-hint{
+    position:absolute;
+    width:20px;
+    height:20px;
+    background:red;
+    top:3px;
+    right:114px;
+    background: url('../../assets/images/hot.png') no-repeat center;
+    background-size: 100%;
+  }
+  .item_link_last{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 15px;
+    cursor: pointer;
+    position: relative;
+    i{
+      position: absolute;
+      display: inline-block;
+      right:-25px;
+      top:0px;
+      width:20px;
+      height: 18px;
+      background: url('../../assets/images/iconfont-shouji.svg') no-repeat center;
+      background-size: 100%;
+    }
+  }
+  .app_qrcode{
+    position: absolute;
+    bottom: 3px;
+    width: 300px;
+    height: 110px;
+    background: transparent;
+    top: 0px;
+    left: -6px;
+    padding-top: 26px;
+    .app_qrcode_zone{
+      width: 280px;
+      height: 110px;
+      background: #fff;
+      display: flex;
+      border-radius: 5px;
+      box-shadow: 1px 1px 1px rgba(0,0,0,.1);
+    }
+    .app_qrcode_img{
+      width: 100px;
+      height:100px;
+      background: url('../../assets/images/all_qr.png') no-repeat center;
+      background-size: 100%;
+      margin: 0px 10px;
+      padding-top: 10px;
+    }
+    .app_qrcode_img_ios{
+      width: 100px;
+      height:100px;
+      background: url('../../assets/images/all_qr.png') no-repeat center;
+      background-size: 100%;
+      margin: 0px 10px;
+      padding-top: 10px;
+    }
+    .app_font{
+      line-height: 2;
+      color:#333;
+      flex:1;
+      a{
+        display: block;
+        margin: 10px;
+        margin-right: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        position: relative;
+        i{
+          display: block;
+          width: 16px;
+          height: 16px;
+          position: absolute;
+          left:20px;
+          top:6px;
+        }
+        .and-ico{
+          background: url('../../assets/images/pc_area1_3.png') no-repeat center;
+          background-size: 100%;
+        }
+        .ios-ico{
+          background: url('../../assets/images/pc_area1_2.png') no-repeat center;
+          background-size: 100%;
+        }
+        .andActive{
+          background: url('../../assets/images/pc_area1_31.png') no-repeat center;
+          background-size: 100%;
+        }
+        .iosActive{
+          background: url('../../assets/images/pc_area1_21.png') no-repeat center;
+          background-size: 100%;
+        }
+      }
+      .andFont{
+        color:#ccc;
+        margin-top: 18px;
+      }
+      .iosFont{
+        color:#ccc;
+        border: 1px solid #ccc;
+      }
+      .AppActive{
+        color:#43cb83;
+        border: 1px solid #43cb83 !important;
+      }
+    }
+  }
+}

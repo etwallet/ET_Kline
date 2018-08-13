@@ -1,0 +1,190 @@
+@import "./config/Vars";
+.processing {
+  width: 1154px;
+  min-width: $content_width;
+  min-height: 280px;
+  background-color: $white;
+  margin: 0 auto;
+
+  .title {
+    position: relative;
+    font-size: 20px;
+    width: 1154px;
+    margin: 0 auto;
+    line-height: 70px;
+    font-weight: bold;
+    text-indent: 20px;
+
+    .btn {
+      display: inline-block;
+      vertical-align: middle;
+      height: 20px;
+      line-height: 20px;
+      font-weight: normal;
+      cursor: pointer;
+      text-indent: 0;
+      margin-left: 20px;
+      transform: rotate(0deg);
+      .iconfont {
+        font-size: 20px;
+        color: $dGray;
+      }
+      &.active {
+        transition: transform 1s ease-out;
+        transform: rotate(720deg);
+      }
+    }
+  }
+  .table {
+    width: 1142px;
+    margin: 10px auto 0 auto;
+    min-height: 0;
+    height: 0;
+    overflow: hidden;
+    transition: min-height 0.5s, height 0.5s;
+
+    &.open {
+      min-height: 120px;
+    }
+    table {
+      border-collapse:collapse;
+      border: none;
+      thead {
+        height: 40px;
+        background-color: $lBlue;
+        th {
+          height: 40px;
+          padding: 0;
+          color: $lGray;
+          font-size: 14px;
+        }
+        th:nth-child(1){
+          width: 160px;
+        }
+        th:nth-child(2){
+          width: 160px;
+        }
+        th:nth-child(3){
+          width: 170px;
+        }
+        th:nth-child(4){
+          width: 170px;
+        }
+        th:nth-child(5){
+          width: 160px;
+        }
+        th:nth-child(6){
+          width: 160px;
+        }
+        th:nth-child(7){
+          width: 160px;
+        }
+      }
+
+      tbody {
+        &:hover {
+          color: $lGray;
+          a {
+            color: $lBlue;
+          }
+        }
+        tr{
+          &:hover {
+            color: $black;
+            a {
+              color: $blue;
+            }
+          }
+          td {
+            text-align: center;
+            font-size: 16px;
+            height: 40px;
+            a{
+              text-decoration: none;
+              color: $blue;
+              letter-spacing: 1px;
+              font-weight: bold;
+            }
+            &.manage {
+              color: $blue;
+              a {
+                cursor: pointer;
+                margin-left: 5px;
+              }
+            }
+          }
+          td:nth-child(1){
+            a {
+              text-decoration: underline;
+            }
+            width: 160px;
+          }
+          td:nth-child(2){
+            width: 160px;
+          }
+          td:nth-child(3){
+            width: 170px;
+          }
+          td:nth-child(4){
+            width: 170px;
+          }
+          td:nth-child(5){
+            width: 160px;
+          }
+          td:nth-child(6){
+            width: 160px;
+          }
+          td:nth-child(7){
+            width: 160px;
+          }
+        }
+      }
+    }
+  }
+  .divider {
+    width: 1154px;
+    height: 2px;
+    background-color: $vlGray;
+    margin: 0 auto;
+  }
+  .release_notice {
+    color: $red;
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 0 10px;
+  }
+
+  /deep/ .el-dialog__wrapper  {
+    .el-dialog {
+      min-width: 400px;
+    }
+    .el-dialog__body {
+      padding: 30px 20px 0px 20px;
+    }
+    .el-dialog__footer {
+      padding: 20px 20px 15px;
+    }
+    .input_group {
+      width: 100%;
+      .pwd_label {
+        display: inline-block;
+        width: 20%;
+        min-width: 60px;
+        line-height: 20px;
+      }
+      .pwd_input {
+        display: inline-block;
+        width: 50%;
+      }
+      .pwd_error {
+        display: inline-block;
+        width: 20%;
+        font-size: 12px;
+        color: $red;
+        line-height: 20px;
+        margin-left: 5px;
+      }
+    }
+
+  }
+}

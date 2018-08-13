@@ -1,0 +1,196 @@
+@import "../config/Vars";
+.banner {
+  position: relative;
+  width: 100%;
+  height: 216px;
+  background: no-repeat center;
+}
+.notice {
+  width: 100%;
+  height: 205px;
+  background-color: $lBlue;
+  .notice_content {
+    width: $content_width;
+    text-align: left;
+    padding: 30px 0px;
+    line-height: 22px;
+    font-size: 16px;
+    color: $gray;
+    margin: 0 auto;
+    p {
+      text-indent: 20px;
+      line-height: 16px;
+    }
+    /deep/ a {
+      text-decoration: none;
+      color: $blue;
+    }
+  }
+}
+.content {
+  width: $content_width;
+  margin: 0 auto;
+  background-color: $white;
+  padding-bottom: 145px;
+  .left{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    float: left;
+    width:560px;
+    height: 880px;
+
+
+    .title {
+      width: 100%;
+      height: 146px;
+      font-size: 30px;
+      color: $dRed;
+      text-align: center;
+      line-height: 176px;
+      font-weight: bold;
+    }
+  }
+  .right{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    float: right;
+    width:560px;
+    height: 880px;
+
+    .title {
+      width: 100%;
+      height: 146px;
+      font-size: 30px;
+      color: $dRed;
+      text-align: center;
+      line-height: 176px;
+      font-weight: bold;
+    }
+  }
+
+  .info {
+    height: 30px;
+    width: 100%;
+    margin-left: 35px;
+
+    .self {
+      display: inline-block;
+      vertical-align: top;
+      width: 200px;
+      font-size: 16px;
+      line-height: 30px;
+      color: $dRed;
+    }
+    .date {
+      display: inline-block;
+      vertical-align: top;
+      width: 280px;
+      font-size: 16px;
+      line-height: 30px;
+      color: $dRed;
+      text-align: end;
+
+      span {
+        display: inline-block;
+        width: 80px;
+      }
+    }
+  }
+
+  .table {
+    width: 534px;
+    margin: 0 auto;
+    height: 660px;
+    border: 1px solid $dRed;
+    table {
+      border-collapse: collapse;
+      border: none;
+      thead {
+        height: 40px;
+        background-color: $dRed;
+        th {
+          height: 40px;
+          padding: 0;
+          color: $white;
+          font-size: 14px;
+        }
+        th:nth-child(1) {
+          width: 84px;
+        }
+        th:nth-child(2) {
+          width: 150px;
+        }
+        th:nth-child(3) {
+          width: 150px;
+        }
+        th:nth-child(3) {
+          width: 150px;
+        }
+      }
+
+      tbody {
+        tr {
+          td {
+            text-align: center;
+            font-size: 16px;
+            height: 60px;
+            a {
+              text-decoration: none;
+              color: $blue;
+            }
+            &.manage {
+              color: $blue;
+              a {
+                cursor: pointer;
+                margin-left: 5px;
+              }
+            }
+          }
+          td:nth-child(1) {
+            width: 84px;
+          }
+          td:nth-child(2) {
+            width: 150px;
+          }
+          td:nth-child(3) {
+            width: 150px;
+          }
+          td:nth-child(4) {
+            width: 150px;
+          }
+          &:nth-child(even){
+            background-color: $vlGray;
+          }
+        }
+
+      }
+    }
+  }
+  .pagination {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    /deep/ .el-pager li.active {
+      border-color: #d1dbe5;
+      background-color: $dRed;
+
+      &:hover {
+        color: $white;
+      }
+    }
+    /deep/ .el-pager li:hover {
+      color: $dRed;
+    }
+    .el-pagination button:hover{
+      color: $dRed;
+    }
+  }
+}
+
+.clear {
+  clear: both;
+}

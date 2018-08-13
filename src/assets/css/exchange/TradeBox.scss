@@ -1,0 +1,511 @@
+@import "../config/Vars";
+.trade_box_zone{
+  width: 100%;
+  background: #EEF0F1;
+  
+}
+.trade_box {
+  position: relative;
+  margin: 15px auto;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  margin: 0 auto;
+  margin-left: 0px;
+  margin-right: 0px;
+  .trade_box_content_zone{
+    display: flex;
+    .trade_choise{
+      width: 220px;
+      border-top:2px solid #90969B;
+      background: $white;
+      min-height: 400px;
+      .trade_choise_title{
+        background:  #2e3140;
+        color: $white;
+        text-align: left;
+        padding:0px 15px;
+        line-height: 3.2;
+      }
+      .trade_choise_name{
+        line-height: 3.4;
+        padding: 0px 10px;
+        span{
+          float: right;
+        }
+        .red{
+          color: $trandeOrange;
+        }
+        .green{
+          color: $tradeGreen;
+        }
+        i{
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          margin-right: 8px;
+          position: relative;
+        }
+        .ico-osc{
+          background: url("../../../assets/images/exchange/osc_ico.png") no-repeat center;
+          background-size: 100%;
+          top:5px;
+        }
+      }
+    }
+    .trade_suan_zone{
+      width: 272px;
+      background: #f7f7f7;
+      padding: 10px 15px;
+      color: #999;
+      margin-top: 4px;
+      p{
+        line-height: 1.8;
+        span{
+          float: right;
+        }
+        .red{
+          color: $trandeOrange !important;
+        }
+      }
+    }
+    .trade_choise_buysell_zone{
+      width: 660px;
+      margin-left: 16px;
+      border-top:2px solid #90969B;
+      height: 385px;
+      background: $white;
+      display: flex;
+      padding: 16px 16px;
+      
+      .trade_input{
+        width: 290px !important;
+        border: 1px solid #d0d0d0 !important;
+        padding-left: 10px;
+        margin: 6px 0px;
+        border-radius: 3px;
+      }
+    }
+    .trade_order_right{
+      flex: 1;
+      border-top:2px solid #90969B;
+      overflow-y: auto;
+      margin-left: 16px;
+      background: $white;
+      .my-tab{
+        /deep/ .el-tabs__nav-scroll{
+          background: #f7f7f7;
+         
+        }
+        /deep/  .is-active{
+          background: $white;
+          border: 1px solid #f7f7f7;
+          border-bottom-color: #ffffff;
+        }
+        /deep/ .el-tab-pane{
+          padding: 0px 10px;
+        }
+      }
+    }
+    .trade_order_right::-webkit-scrollbar {/*滚动条整体样式*/
+      width: 10px;     /*高宽分别对应横竖滚动条的尺寸*/
+      height: 1px;
+    }
+    .trade_order_right::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+      border-radius: 10px;
+       -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+      background: #535353;
+     }
+    .trade_order_right::-webkit-scrollbar-track {/*滚动条里面轨道*/
+      -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+      border-radius: 10px;
+      background: #EDEDED;
+     }
+  }
+  .recharge-btn{
+    float:right;
+    a{
+      text-decoration: none;
+      color: $blue;
+    }
+  }
+  .login_panel {
+    display: none;
+    .modal {
+      position: absolute;
+      left: 16px;
+      top: 0;
+      width: 692px;
+      height: 100%;
+      z-index: 999;
+      background: $black;
+      filter:alpha(opacity=50);
+      opacity: 0.5;
+    }
+    .to_login {
+      position: absolute;
+      left: 50%;
+      top: 48%;
+      margin-left: -140px;
+      margin-top: -30px;
+      display: block;
+      width: 280px;
+      height: 60px;
+      line-height: 60px;
+      background-color: $lYellow;
+      border-radius: 4px;
+      z-index: 9999;
+      text-decoration: none;
+      font-size: 24px;
+      color: $white;
+      text-align: center;
+    }
+  }
+
+  &.frozen {
+    .login_panel {
+      display: block;
+    }
+  }
+  .box {
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    height: 380px;
+    color: $dGray;
+    padding: 0px 10px;
+    padding-right: 20px;
+
+    &.rborder {
+      border-right: dashed 1px rgba(0,0,0,.1);
+    }
+
+    .banlance {
+      font-size: 15px;
+      line-height: 18px;
+      color: $table_td;
+      padding-bottom: 16px;
+      
+    }
+
+    .type_select {
+      margin-top: 20px;
+      width: 350px;
+      height: 42px;
+      border-radius: 2px;
+      background-color: rgba(255,255,255,.01);
+      color: $table_td;
+      border: solid 1px rgba(255,255,255,.03);
+      padding-left: 5px;
+    }
+
+    .price_limit {
+
+      .input_info {
+        margin-top: 20px;
+        height: 18px;
+        font-size: 14px;
+        line-height: 16px;
+
+        .input_pirce {
+          float: left;
+          width: 124px;
+          color: $table_td;
+        }
+
+        .input_num {
+          float: left;
+          width: 124px;
+          color: $tradeGreen;
+        }
+
+        .input_amount {
+          float: left;
+          width: 100px;
+          color: $table_td;
+        }
+      }
+
+      .input_group {
+        margin-top: 8px;
+        input {
+          height: 32px;
+          width: 98px;
+          background: rgba(255,255,255,.01);
+          border:1px solid rgba(255,255,255,.03);
+          border-radius: 3px;
+        }
+        i{
+          color: $table_td;
+        }
+      }
+
+      .slider {
+        width: 350px;
+        margin: 5px auto;
+        label {
+          font-size: 14px;
+        }
+        .slider_bar {
+          width: 274px;
+          display: inline-block;
+          vertical-align: middle;
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .market_limit {
+      margin-top: 44px;
+      .market_amount_input {
+        position: relative;
+        width: 350px;
+        margin: 10px 0;
+        input {
+          width: 341px;
+          height: 36px;
+          padding: 0  0 0 5px;
+        }
+
+        .market_amount_crypto {
+          position: absolute;
+          right: 12px;
+          top: 14px;
+          font-size: 14px;
+          color: $gray;
+          user-select: none;
+        }
+
+        .trade_input{
+          width: 290px !important;
+          border: 1px solid #d0d0d0 !important;
+          padding-left: 10px;
+          margin: 6px 0px;
+        }
+      }
+
+      .slider {
+        width: 350px;
+        margin: 15px auto;
+        label {
+          font-size: 14px;
+        }
+        .slider_bar {
+          width: 200px;
+          display: inline-block;
+          vertical-align: middle;
+          margin-left: 20px;
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .payment_password_input {
+      width: 350px;
+      margin: 0px 0;
+      margin-top: 4px;
+      input {
+        width: 341px;
+        height: 36px;
+        padding: 0  0 0 5px;
+      }
+    }
+
+    .error_notice {
+      width: 305x;
+      height: 16px;
+      line-height: 16px;
+      color: $red;
+      margin-top: 4px;
+      position: absolute;
+      bottom:0px;
+    }
+    .btn {
+      width: 302px;
+      height: 40px;
+      margin-top: 6px;
+      line-height: 40px;
+      text-align: center;
+      cursor: pointer;
+      color: $white;
+      font-size: 14px;
+      background-color: $tradeGreen;
+      border-radius: 3px;
+      &:hover {
+        background-color: $lTradeGreen;
+      }
+    }
+
+
+    &.buy {
+      .banlance {
+        span {
+          color: $tradeGreen;
+        }
+      }
+
+      .btn {
+        background-color: $tradeGreen;
+
+        &:hover {
+          background-color: $lTradeGreen;
+        }
+      }
+
+
+      /deep/ .vue-slider-component .vue-slider-process{
+        background-color: $tradeGreen;
+      }
+
+      /deep/ .vue-slider-component .vue-slider-tooltip{
+        background-color: $tradeGreen;
+        border-color: $tradeGreen;
+      }
+    }
+
+
+    &.sell {
+      padding-left: 20px;
+      padding-right: 10px;
+      .banlance {
+        span {
+          color: $tradeRed;
+        }
+      }
+
+      .price_limit {
+        .input_num {
+          color: $tradeRed;
+        }
+      }
+
+      .btn {
+        background-color: $tradeRed;
+
+        &:hover {
+          background-color: $lTradeRed;
+        }
+      }
+
+
+      /deep/ .vue-slider-component .vue-slider-process{
+        background-color: $tradeRed;
+      }
+
+      /deep/ .vue-slider-component .vue-slider-tooltip{
+        background-color: $tradeRed;
+        border-color: $tradeRed;
+      }
+    }
+
+    .box_title {
+      position: relative;
+      font-size: 16px;
+      line-height: 30px;
+      text-indent: 4px;
+      .more {
+        position: absolute;
+        right: 0;
+        top: 0;
+        a {
+          font-size: 12px;
+          text-decoration: none;
+          color: $blue;
+        }
+      }
+    }
+
+    .table {
+      width: 100%;
+      table {
+        border-collapse:collapse;
+        border: none;
+        thead {
+          height: 40px;
+          background-color: $lBlue;
+          th {
+            height: 40px;
+            padding: 0;
+            color: $lGray;
+            font-size: 14px;
+          }
+          th:nth-child(1){
+            width: 100px;
+          }
+          th:nth-child(2){
+            width: 140px;
+            text-align: center;
+          }
+          th:nth-child(3){
+            width: 140px;
+            text-align: center;
+          }
+        }
+
+        tbody {
+          tr{
+            td {
+              text-align: center;
+              font-size: 14px;
+              height: 30px;
+              a{
+                text-decoration: none;
+                color: $blue;
+              }
+              &.manage {
+                color: $blue;
+                a {
+                  cursor: pointer;
+                  margin-left: 5px;
+                }
+              }
+            }
+            td:nth-child(1){
+              width: 100px;
+            }
+            td:nth-child(2){
+              width: 140px;
+              text-align: center;
+            }
+            td:nth-child(3){
+              width: 140px;
+              text-align: center;
+            }
+            &:nth-child(even){
+              background-color: $vlGray;
+            }
+            .cancel_btn {
+              cursor: pointer;
+              margin-left: 12px;
+              &:hover {
+                color: $red;
+              }
+            }
+          }
+        }
+      }
+
+      .pagination {
+        position: absolute;
+        left: 0;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+        /deep/ .el-pager li.active {
+          border-color: #d1dbe5;
+          background-color: $yellow;
+
+          &:hover {
+            color: $white;
+          }
+        }
+        .el-pager li:hover {
+          color: $yellow;
+        }
+        .el-pagination button:hover{
+          color: $yellow;
+        }
+      }
+    }
+
+  }
+}

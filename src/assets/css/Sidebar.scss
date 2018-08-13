@@ -1,0 +1,40 @@
+@import "./config/Vars";
+.sidebar {
+  width: 100%;
+}
+.menu_group {
+  background-color: $dBg;
+  padding: 6px;
+  border-radius: 3px;
+  min-height: 280px;
+  .title {
+    width: 100%;
+    height: 40px;
+    background-color: $yellow;
+    color: $white;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: left;
+  }
+  .menu_item {
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    text-align: left;
+    font-size: 14px;
+
+    a {
+      color: #C7CCE6;
+      display: block;
+      text-decoration: none;
+      padding-left: 26px;
+      &.router-link-active {
+        color: $blue;
+        background: #2e3140;
+      }
+      &:hover{
+        color: $blue;
+      }
+    }
+  }
+}

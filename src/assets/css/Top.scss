@@ -1,0 +1,93 @@
+@import "./config/Vars";
+.top {
+  // width: 100%;
+  width: 1200px;
+  margin: 0 auto;
+  height: 57px;
+  background-color: #3cb3ff;
+
+  .div-right {
+    text-align: center;
+    line-height: 57px;
+    // overflow: hidden;
+
+    .search_btn {
+      display: block;
+      background: url("../../assets/images/search-icon.png") no-repeat center;
+
+      background-size: 100%;
+      width: 20px;
+      height: 20px;
+    }
+    .trade_input {
+      border: 1px solid rgba(255, 255, 255, 1) !important;
+      height: 30px !important;
+      padding-left: 34px;
+      border-radius: 3px;
+      display: block;
+      width: 100%;
+      color: $exchange_title;
+
+      // background: #f5f5f5;
+      // -webkit-align-items: center;
+      // align-items: center;
+      // justify-content: center;
+    }
+  }
+  .btn-search {
+    font-size: 14px;
+    color: #fff;
+    background: #ff742f;
+    margin-left: 3px;
+    height: 33px;
+    margin-top: 8px;
+    border: #ff742f solid 3px;
+    border-radius: 5px;
+  }
+}
+.top-zone {
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 999;
+  background-color: $mainColor;
+}
+.today-trend-zone {
+  width: 100%;
+  background: $dmainColor;
+}
+.today-trend {
+  width: 100%;
+  background: $dmainColor;
+  max-width: $content_width;
+  margin: 0 auto;
+  span {
+    line-height: 2;
+    margin-right: 10px;
+    color: $white;
+    margin-left: 35px;
+  }
+  .green {
+    color: $trandtopGreen;
+  }
+  .orange {
+    color: $trandeOrange;
+  }
+  .up {
+    background: url("../../assets/images/up.png") no-repeat;
+    width: 8px;
+    height: 10px;
+    display: inline-block;
+    margin-left: 5px;
+    position: relative;
+  }
+  .down {
+    background: url("../../assets/images/down.png") no-repeat;
+    width: 8px;
+    height: 10px;
+    display: inline-block;
+    margin-left: 5px;
+    position: relative;
+  }
+}
