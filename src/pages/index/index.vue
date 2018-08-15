@@ -70,9 +70,9 @@
           <div style="flex:1"></div>
           <div style="flex:1"></div>
          <div style="display:flex;float:right;flex:1">
-          <div class="div-right1">
+          <div class="div-right1" style="width: 78%;">
             <div style="position: relative;display:flex; margin-top:8px;">
-                 <div></div>   <input   class="trade_input1" @keydown="searchKeyWord" type="text" v-model="keyWordValue" placeholder="输入账号搜索交易记录"  @input="searchKeyWord"> 
+                 <div></div>   <input   class="trade_input1" @keydown="searchKeyWord" type="text" v-model="keyWordValue" placeholder="  输入账号搜索交易记录"  @input="searchKeyWord"> 
                     <i class="search_btn1" style="position: absolute;left:12px;top:7px;"></i>
             </div>
           </div>
@@ -84,9 +84,16 @@
           <div class="div-data-item-title">最新交易记录</div>
 
             <div  style="font-size:16px;" v-for="(item,index) in newDatas" :key="index">
-              <div  v-show="crypto_currency=='RAM/EOS'" style="padding:10px 20px;display:flex;"><div style="flex:1;color:#3CB3FF" @click="search(item.payer)">{{item.payer }}</div> <div style="flex:1;color:#FF5959;padding-left:20px;" v-show="item.action_name=='sellram'">卖出：{{item.ram_qty}}</div><div style="flex:1;color:#53B987;padding-left:20px;"  v-show="item.action_name=='buyram'">买入：{{item.ram_qty}}</div> </div>
-              <div  v-show="crypto_currency!='RAM/EOS'" style="padding:10px 20px;display:flex;"><div style="flex:1;color:#3CB3FF" @click="search(item.account)">{{item.account }}</div> <div style="flex:1;color:#FF5959;padding-left:20px;" v-show="item.action_name=='selltoken'">卖出：{{item.token_qty}}</div><div style="flex:1;color:#53B987;padding-left:20px;"  v-show="item.action_name=='buytoken'">买入：{{item.token_qty}}</div> </div>
-             <div style="padding:0px 20px 10px 20px;display:flex;"><div style="flex:1;color:#999">{{item.record_date}}</div> <div style="flex:1;color:#999;padding-left:20px;">价格：{{item.price|dataFilters}}</div></div>
+              <div  v-show="crypto_currency=='RAM/EOS'" style="padding:10px 20px;display:flex;">
+              <div style="flex:1;color:#3CB3FF;cursor:pointer;" @click="search(item.payer)">{{item.payer }}</div> 
+              <div style="flex:1;color:#FF5959;padding-left:20px;" v-show="item.action_name=='sellram'">卖出：{{item.eos_qty}}</div>
+              <div style="flex:1;color:#53B987;padding-left:20px;"  v-show="item.action_name=='buyram'">买入：{{item.eos_qty}}</div> </div>
+              <div  v-show="crypto_currency!='RAM/EOS'" style="padding:10px 20px;display:flex;">
+              <div style="flex:1;color:#3CB3FF;cursor:pointer;" @click="search(item.account)">{{item.account }}</div> 
+              <div style="flex:1;color:#FF5959;padding-left:20px;" v-show="item.action_name=='selltoken'">卖出：{{item.token_qty}}</div>
+              <div style="flex:1;color:#53B987;padding-left:20px;"  v-show="item.action_name=='buytoken'">买入：{{item.token_qty}}</div> 
+              </div>
+             <div style="padding:0px 20px 10px 20px;display:flex;"><div style="flex:1;color:#999">{{item.record_date|mountTime}}</div> <div style="flex:1;color:#999;padding-left:20px;">价格：{{item.price|dataFilters}}</div></div>
              <div style="width:90%;margin-left:auto;margin-right:auto;height:1px;background:#ccc" v-show="index != newDatas.length-1"></div>
             </div>
             <!-- <el-pagination
@@ -97,16 +104,16 @@
         <div class="div-data-item" style="margin-left:8px;">
           <div class="div-data-item-title">最新大单交易</div>
           <div  style="font-size:16px;" v-for="(item,index) in maxDatas" :key="index">
-             <div  v-show="crypto_currency!='RAM/EOS'" style="padding:10px 20px;display:flex;"><div style="flex:1;color:#3CB3FF"  @click="search(item.account)">{{item.account }}</div> <div style="flex:1;color:#FF5959;padding-left:20px;" v-show="item.action_name=='selltoken'">卖出：{{item.token_qty}}</div><div style="flex:1;color:#53B987;padding-left:20px;"  v-show="item.action_name=='buytoken'">买入：{{item.token_qty}}</div> </div>
-             <div  v-show="crypto_currency=='RAM/EOS'" style="padding:10px 20px;display:flex;"><div style="flex:1;color:#3CB3FF" @click="search(item.payer)">{{item.payer }}</div> <div style="flex:1;color:#FF5959;padding-left:20px;" v-show="item.action_name=='sellram'">卖出：{{item.ram_qty}}</div><div style="flex:1;color:#53B987;padding-left:20px;"  v-show="item.action_name=='buyram'">买入：{{item.ram_qty}}</div> </div>
-             <div style="padding:0px 20px 10px 20px;display:flex;"><div style="flex:1;color:#999">{{item.record_date}}</div> <div style="flex:1;color:#999;padding-left:20px;">价格：{{item.price|dataFilters}}</div></div>
+             <div  v-show="crypto_currency!='RAM/EOS'" style="padding:10px 20px;display:flex;"><div style="flex:1;color:#3CB3FF;cursor:pointer;"  @click="search(item.account)">{{item.account }}</div> <div style="flex:1;color:#FF5959;padding-left:20px;" v-show="item.action_name=='selltoken'">卖出：{{item.token_qty}}</div><div style="flex:1;color:#53B987;padding-left:20px;"  v-show="item.action_name=='buytoken'">买入：{{item.token_qty}}</div> </div>
+             <div  v-show="crypto_currency=='RAM/EOS'" style="padding:10px 20px;display:flex;"><div style="flex:1;color:#3CB3FF;cursor:pointer;" @click="search(item.payer)">{{item.payer }}</div> <div style="flex:1;color:#FF5959;padding-left:20px;" v-show="item.action_name=='sellram'">卖出：{{item.eos_qty}}</div><div style="flex:1;color:#53B987;padding-left:20px;"  v-show="item.action_name=='buyram'">买入：{{item.eos_qty}}</div> </div>
+             <div style="padding:0px 20px 10px 20px;display:flex;"><div style="flex:1;color:#999">{{item.record_date|mountTime}}</div> <div style="flex:1;color:#999;padding-left:20px;">价格：{{item.price|dataFilters}}</div></div>
               <div style="width:90%;margin-left:auto;margin-right:auto;height:1px;background:#ccc" v-show="index != maxDatas.length-1"></div>
           </div>
         </div>
         <div class="div-data-item" style="margin-left:8px;" v-show="crypto_currency=='RAM/EOS'">
           <div class="div-data-item-title" v-show="crypto_currency=='RAM/EOS'">持仓排行</div>
           <div  style="font-size:16px;" v-for="(item,index) in largeDatas" :key="index" v-show="crypto_currency=='RAM/EOS'">
-              <div style="padding:10px 20px;display:flex;"><div style="flex:1;color:#3CB3FF" @click="search(item.account)">{{index+1}}：{{item.account}}</div> <div style="flex:1;color:#FF5959;padding-left:20px;" v-show="item.profit.indexOf('-')>=0?true:false">盈亏：{{item.profit}}</div><div style="flex:1;color:#53B987;padding-left:20px;"   v-show="item.profit.indexOf('+')>=0?true:false">盈亏：{{item.profit}}</div> </div>
+              <div style="padding:10px 20px;display:flex;"><div style="flex:1;color:#3CB3FF;cursor:pointer;" @click="search(item.account)">{{index+1}}：{{item.account}}</div> <div style="flex:1;color:#FF5959;padding-left:20px;" v-show="item.profit.indexOf('-')>=0?true:false">盈亏：{{item.profit}}</div><div style="flex:1;color:#53B987;padding-left:20px;"   v-show="item.profit.indexOf('+')>=0?true:false">盈亏：{{item.profit}}</div> </div>
              <div style="padding:0px 20px 10px 20px;display:flex;"><div style="flex:1;color:#999">持仓：{{item.ramQuota}}</div> <div style="flex:1;color:#999;padding-left:20px;">均价：{{item.historyAverageCost|dataFilters}}</div></div>
              <div style="width:90%;margin-left:auto;margin-right:auto;height:1px;background:#ccc" v-show="index != maxDatas.length-1"></div>
           </div>
@@ -116,26 +123,33 @@
       <!--搜索-->
       <div class="div-data-search" v-show="isSeaarchResult">
         <div class="div-data-item-search">
-          <div class="div-data-item-title-search">交易记录 > 账户详情 <span style="float:right;margin-right:20px;" @click="closeSearch">X</span></div>
-           <div   class="div-data-item-title-search-top">
+          <div class="div-data-item-title-search">交易记录 > 账户详情 <span style="float:right;margin-right:20px;cursor:pointer;" @click="closeSearch">X</span></div>
+           <div class="div-data-item-title-search-top">
              <div class="div-data-item-title-search-top-item">操作者</div>
              <div class="div-data-item-title-search-top-item">类型</div>
-             <div class="div-data-item-title-search-top-item">数量<span>(RAM)</span></div>
+             <div class="div-data-item-title-search-top-item">数量<span v-show="crypto_currency =='RAM/EOS'" >(RAM)</span><span v-show="crypto_currency !='RAM/EOS'" >({{exchange_from}})</span></div>
              <div class="div-data-item-title-search-top-item">价格<span>(EOS)</span></div>
              <div class="div-data-item-title-search-top-item">时间戳</div>		
            </div>
-            <div  style="font-size:25px;display:flex;text-align: center; line-height: 1.5;" v-for="(item,index) in searchDatas" :key="index">
+            <div  v-show="crypto_currency =='RAM/EOS'"  style="font-size:25px;display:flex;text-align: center; line-height: 1.5;cursor:pointer;" v-for="(item,index) in searchDatas" :key="index" @click="openExplorer('https://eospark.com/MainNet/tx/'+item.trx_id)">
               <div style="flex:1;color:#808080">{{item.payer}}</div>
               <div style="flex:1;color:#808080"><span v-show="item.action_name=='buyram'" style="color:#5ABD8C">购买</span><span v-show="item.action_name=='sellram'"  style="color:#FB5F5F">出售</span></div>
               <div style="flex:1;color:#808080"><span v-show="item.action_name=='buyram'" style="color:#5ABD8C">{{item.ram_qty}}</span><span v-show="item.action_name=='sellram'"  style="color:#FB5F5F">{{item.ram_qty}}</span></div>
               <div style="flex:1;color:#808080"><span v-show="item.action_name=='buyram'" style="color:#5ABD8C">{{item.price|dataFilters}}</span><span v-show="item.action_name=='sellram'"  style="color:#FB5F5F">{{item.price|dataFilters}}</span></div>
               <div style="flex:1;color:#808080">{{item.record_date}}</div>
             </div>
+            <div  v-show="crypto_currency !='RAM/EOS'"  style="font-size:25px;display:flex;text-align: center; line-height: 1.5;cursor:pointer;" v-for="(item,index) in searchDatas" :key="index" @click="openExplorer('https://eospark.com/MainNet/tx/'+item.trx_id)">
+              <div style="flex:1;color:#808080">{{item.account}}</div>
+              <div style="flex:1;color:#808080"><span v-show="item.action_name=='buytoken'" style="color:#5ABD8C">购买</span><span v-show="item.action_name=='selltoken'"  style="color:#FB5F5F">出售</span></div>
+              <div style="flex:1;color:#808080"><span v-show="item.action_name=='buytoken'" style="color:#5ABD8C">{{item.token_qty|dataFilters2}}</span><span v-show="item.action_name=='selltoken'"  style="color:#FB5F5F">{{item.token_qty|dataFilters2}}</span></div>
+              <div style="flex:1;color:#808080"><span v-show="item.action_name=='buytoken'" style="color:#5ABD8C">{{item.price|dataFilters}}</span><span v-show="item.action_name=='selltoken'"  style="color:#FB5F5F">{{item.price|dataFilters}}</span></div>
+              <div style="flex:1;color:#808080">{{item.record_date}}</div>
+            </div>
              <div style="padding:10px 10px 10px 10px; font-size: 16px;line-height: 2;" v-show="isMore">
               <span style="padding:6px 10px 6px 10px; color: #fff;border: #4598e0;
-                 border-radius: 3px; text-align: center;background: #4598e0" @click="up" >{{pageIndex==0?"首页":"上一页"}}</span>
+                 border-radius: 3px; text-align: center;background: #4598e0;cursor:pointer;" @click="up" >{{pageIndex==0?"首页":"上一页"}}</span>
               <span style="margin-left:20px;padding:6px 10px 6px 10px; color: #fff;line-height:2;border: #4598e0;
-                 border-radius: 3px; text-align: center;background: #4598e0" @click="next">下一页</span>
+                 border-radius: 3px; text-align: center;background: #4598e0;cursor:pointer;" @click="next">下一页</span>
              </div>
      
         </div>
@@ -161,6 +175,7 @@ import exchange from "../../models/exchange";
 
 import notice1 from "../../models/notice1";
 import moment from "../../utils/moment";
+import _moment from "moment/min/moment-with-locales";
 
 import { API_BASE_URL, EXCHANGE_KLINE } from "../../models/url";
 
@@ -211,8 +226,20 @@ export default {
     dataFilters1(data) {
       if (undefined == data || data == "") return "";
       return (parseFloat(data) * 100).toFixed(2) + " %";
+    },
+   dataFilters2(data) {
+      if (undefined == data || data == "") return "";
+      return parseFloat(data).toFixed(4);
+    },
+    mountTime(time) {
+      return _moment(time)
+        .add(8, "hours")
+        .fromNow();
     }
   },
+  // mountTime(){
+
+  // },
   created: function() {
     this.get_exchange_list();
     this.initRamData();
@@ -236,6 +263,38 @@ export default {
 
     clearTimeout(this.ticker_timer);
   },
+  // formatDatetwo: function(time) {
+  //     var re = /-?\d+/;
+  //     var m = re.exec(time);
+  //     var d = new Date(parseInt(m[0]));
+  //     var o = {
+  //       "M+": d.getMonth() + 1, //month
+  //       "d+": d.getDate(), //day
+  //       "h+": d.getHours(), //hour
+  //       "m+": d.getMinutes(), //minute
+  //       "s+": d.getSeconds(), //second
+  //       "q+": Math.floor((d.getMonth() + 3) / 3), //quarter
+  //       S: d.getMilliseconds() //millisecond
+  //     };
+  //     var format = "yyyy-MM-dd";
+  //     if (/(y+)/.test(format)) {
+  //       format = format.replace(
+  //         RegExp.$1,
+  //         (d.getFullYear() + "").substr(4 - RegExp.$1.length)
+  //       );
+  //     }
+  //     for (var k in o) {
+  //       if (new RegExp("(" + k + ")").test(format)) {
+  //         format = format.replace(
+  //           RegExp.$1,
+  //           RegExp.$1.length == 1
+  //             ? o[k]
+  //             : ("00" + o[k]).substr(("" + o[k]).length)
+  //         );
+  //       }
+  //     }
+  //     return format;
+  //   },
   methods: {
     cryptoCurrencyChange: function(key) {
       this.code = key;
@@ -397,6 +456,12 @@ export default {
     closeSearch() {
       this.keyWordValue = "";
       this.isSeaarchResult = false;
+    },
+    openExplorer(address) {
+      // this.keyWordValue = "";
+      // this.isSeaarchResult = false;
+      // window.open('http:\\www.baidu.com');
+      window.open(address, "_blank");
     },
     up() {
       if (this.isLoading || this.pageIndex == 0) return;
