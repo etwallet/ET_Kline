@@ -3,14 +3,13 @@
     <div class="site_map">
       <div class="site_map_left">
         友情链接：      
-        <a  href="https://www.jinse.com/" target="_blank">金色财经</a>
-        <a  href="http://www.bishijie.com/kuaixun/" target="_blank">币世界</a>
-        <a  href="https://eos.io/" target="_blank">eosio</a>
-        <a  href="http://eosgravity.com/" target="_blank">EOS引力区</a>
-        <a  href="http://eostoken.im/" target="_blank">EosToken</a>
-        <a  href="https://eostracker.io/" target="_blank">eostracker.io</a>
-        <a  href="https://eosmonitor.io/" target="_blank">eosmonitor.io</a>
-        <a  href="http://www.firefoxotc.com" target="_blank"  v-show="false">火狐狸</a>
+        <a  href="https://explorer.eoseco.com/" target="_blank">eoseco</a>
+        <a  href="https://party.eosmonitor.io/" target="_blank">eosmonitor.io</a>
+        <a  href="http://eostoken.im/" target="_blank">eostoken</a>
+        <a  href="https://www.imeos.one/" target="_blank">imeos</a>
+        <a  href="https://meet.one/" target="_blank">meet.one</a>
+        <a  href="https://www.eosforce.io/?lang=Cn" target="_blank">eosforce</a>
+        <a  href="https://eostoken.github.io/EOS-Navigator/" target="_blank">EOS guide</a>
       </div>
       
     </div>

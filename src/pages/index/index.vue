@@ -37,8 +37,9 @@
         <span style="color:#41B57C;font-size:48px">{{priceInfo.price|dataFilters}}</span>
         <span style="color:#999999;font-size:28px" v-show="crypto_currency=='RAM/EOS'">&nbsp;RAM</span>
         <span style="color:#999999;font-size:28px" v-show="crypto_currency!='RAM/EOS'">&nbsp;EOS</span>
+        <!-- <a href="http://www.eostoken.im" style="color:#FB5F5F;font-size:20px;margin-left:5px">钱包下载</a> -->
       </div>
-      <div class="kline-top">
+      <div class="kline-top" style="margin-bottom:15px">
         <div class="kline-top-item">
           <span style="color:#808080;font-size:16px">当日涨幅&nbsp;</span>
           <span style="color:#41B57C;font-size:33px" v-show="priceInfo.increase>=0">{{priceInfo.increase | dataFilters1}}</span>
